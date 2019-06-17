@@ -98,25 +98,25 @@
 
 
 
-  <meta name="description" content="記錄工作上，ProgressBar 的實現方式，以及如何結合API，達到推進的效果。">
-<meta name="keywords" content="Vue,頁面邏輯">
+  <meta name="description" content="初步摸索 React 相關的基礎知識，簡單記錄一點實作的過程，方便日後查看。">
+<meta name="keywords" content="React,Demo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="簡單實現 ProgressBar 效果">
-<meta property="og:url" content="https://pittwu-hexo-blog.netlify.com/2019/06/12/progressBar/index.html">
+<meta property="og:title" content="React：簡單留言本實作">
+<meta property="og:url" content="https://pittwu-hexo-blog.netlify.com/2019/06/16/react-textContent-demo/index.html">
 <meta property="og:site_name" content="Pitt Wu&#39;s Blog">
-<meta property="og:description" content="記錄工作上，ProgressBar 的實現方式，以及如何結合API，達到推進的效果。">
+<meta property="og:description" content="初步摸索 React 相關的基礎知識，簡單記錄一點實作的過程，方便日後查看。">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:updated_time" content="2019-06-16T14:36:25.595Z">
+<meta property="og:updated_time" content="2019-06-16T23:55:00.293Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="簡單實現 ProgressBar 效果">
-<meta name="twitter:description" content="記錄工作上，ProgressBar 的實現方式，以及如何結合API，達到推進的效果。">
+<meta name="twitter:title" content="React：簡單留言本實作">
+<meta name="twitter:description" content="初步摸索 React 相關的基礎知識，簡單記錄一點實作的過程，方便日後查看。">
 
 
 
 
 
 
-  <link rel="canonical" href="https://pittwu-hexo-blog.netlify.com/2019/06/12/progressBar/">
+  <link rel="canonical" href="https://pittwu-hexo-blog.netlify.com/2019/06/16/react-textContent-demo/">
 
 
 
@@ -126,7 +126,7 @@
   };
 </script>
 
-  <title>簡單實現 ProgressBar 效果 | Pitt Wu's Blog</title>
+  <title>React：簡單留言本實作 | Pitt Wu's Blog</title>
   
 
 
@@ -364,7 +364,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://pittwu-hexo-blog.netlify.com/2019/06/12/progressBar/">
+    <link itemprop="mainEntityOfPage" href="https://pittwu-hexo-blog.netlify.com/2019/06/16/react-textContent-demo/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Pitt Wu">
@@ -381,7 +381,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">簡單實現 ProgressBar 效果
+          <h1 class="post-title" itemprop="name headline">React：簡單留言本實作
 
               
             
@@ -407,7 +407,7 @@
                 
               
 
-              <time title="Created: 2019-06-12 00:29:25" itemprop="dateCreated datePublished" datetime="2019-06-12T00:29:25+08:00">2019-06-12</time>
+              <time title="Created: 2019-06-16 22:35:11" itemprop="dateCreated datePublished" datetime="2019-06-16T22:35:11+08:00">2019-06-16</time>
             
 
             
@@ -424,7 +424,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-06-16 22:36:25" itemprop="dateModified" datetime="2019-06-16T22:36:25+08:00">2019-06-16</time>
+                <time title="Modified: 2019-06-17 07:55:00" itemprop="dateModified" datetime="2019-06-17T07:55:00+08:00">2019-06-17</time>
               
             
           </span>
@@ -437,7 +437,7 @@
 
           
           
-             <span id="/2019/06/12/progressBar/" class="leancloud_visitors" data-flag-title="簡單實現 ProgressBar 效果">
+             <span id="/2019/06/16/react-textContent-demo/" class="leancloud_visitors" data-flag-title="React：簡單留言本實作">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -468,32 +468,38 @@
       
 
       
-        <p>記錄工作上，ProgressBar 的實現方式，以及如何結合API，達到推進的效果。<br><a id="more"></a></p>
-<h2 id="頁面結構"><a href="#頁面結構" class="headerlink" title="頁面結構"></a>頁面結構</h2><h3 id="準備一條當基底背景的-ProgressBar"><a href="#準備一條當基底背景的-ProgressBar" class="headerlink" title="準備一條當基底背景的 ProgressBar"></a>準備一條當基底背景的 ProgressBar</h3><ul>
-<li><p>index.vue( 此處使用 Pug )</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">span.graph</span><br></pre></td></tr></table></figure>
+        <p>初步摸索 <code>React</code> 相關的基礎知識，簡單記錄一點實作的過程，方便日後查看。<br><a id="more"></a></p>
+<h2 id="配置開發環境"><a href="#配置開發環境" class="headerlink" title="配置開發環境"></a>配置開發環境</h2><h3 id="install-官方腳手架工具-create-react-app"><a href="#install-官方腳手架工具-create-react-app" class="headerlink" title="install 官方腳手架工具 create-react-app"></a>install 官方腳手架工具 create-react-app</h3><p><a href="https://github.com/facebook/create-react-app" target="_blank" rel="noopener">Github 網址</a></p>
+<h4 id="全域安裝"><a href="#全域安裝" class="headerlink" title="全域安裝"></a>全域安裝</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add create-react-app -g</span><br></pre></td></tr></table></figure>
+<h4 id="啟動-demo"><a href="#啟動-demo" class="headerlink" title="啟動 demo"></a>啟動 demo</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create-react-app react-textcontent-demo</span><br></pre></td></tr></table></figure>
+<h4 id="運行"><a href="#運行" class="headerlink" title="運行"></a>運行</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd react-textcontent-demo</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn start</span><br></pre></td></tr></table></figure>
+<h2 id="第一個組件"><a href="#第一個組件" class="headerlink" title="第一個組件"></a>第一個組件</h2><h3 id="建立-Hello-js"><a href="#建立-Hello-js" class="headerlink" title="建立 Hello.js"></a>建立 Hello.js</h3><p><code>mkdir src/Hello.js</code></p>
+<h3 id="寫入-Hello-React-內容"><a href="#寫入-Hello-React-內容" class="headerlink" title="寫入 Hello React 內容"></a>寫入 Hello React 內容</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">import React from &apos;react&apos;</span><br><span class="line"></span><br><span class="line">class Hello extends React.Component &#123;</span><br><span class="line">  render () &#123;</span><br><span class="line">    return &lt;h1&gt; Hello React &lt;/h1&gt;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">export default Hello</span><br></pre></td></tr></table></figure>
+<h3 id="引入到-src-index-js"><a href="#引入到-src-index-js" class="headerlink" title="引入到 src/index.js"></a>引入到 src/index.js</h3><ul>
+<li><p>引入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import Hello from &apos;./Hello&apos;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>style.scss</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">// ProgressBar 的寬高、背景色或 border-radius，依設計需求調整。</span><br><span class="line"></span><br><span class="line">.graph &#123;</span><br><span class="line">  display: flex;</span><br><span class="line">  width: 85%;</span><br><span class="line">  height: 6px;</span><br><span class="line">  background-color: #e6f8f9;</span><br><span class="line">  border-radius: $radius;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li><p>掛載，此時可以看到畫面渲染出 <code>Hello React</code> 的畫面。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ReactDOM.render(&lt;Hello /&gt;, document.getElementById(&apos;root&apos;));</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h3 id="準備一條產生前進變化的-ProgressBar"><a href="#準備一條產生前進變化的-ProgressBar" class="headerlink" title="準備一條產生前進變化的 ProgressBar"></a>準備一條產生前進變化的 ProgressBar</h3><ul>
-<li><p>index.vue</p>
+<h2 id="JSX-語法"><a href="#JSX-語法" class="headerlink" title="JSX 語法"></a>JSX 語法</h2><p>JSX 語法是一種語法糖，近似於 <code>JavaScript</code> 的語法擴充，放棄模板語言的形式，採用更語意化可讀性更強的標籤。並且使用 {} 內嵌任何 <code>JavaScript</code> 表達式。</p>
+<h3 id="e-g-計算屬性"><a href="#e-g-計算屬性" class="headerlink" title="e.g. 計算屬性"></a>e.g. 計算屬性</h3><p>如下，JSX 會計算出 3 這個數字，並渲染到頁面上。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">import React from &apos;react&apos;</span><br><span class="line"></span><br><span class="line">class Hello extends React.Component &#123;</span><br><span class="line">  render () &#123;</span><br><span class="line">    const todoList = [&apos;Learning React&apos;, &apos;Learning English&apos;]</span><br><span class="line">    return (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &lt;h1&gt; Hello React &lt;/h1&gt;</span><br><span class="line">        &#123; 1+2 &#125;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    )</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">export default Hello</span><br></pre></td></tr></table></figure></p>
+<h3 id="e-g-使用-JSX-遍歷陣列"><a href="#e-g-使用-JSX-遍歷陣列" class="headerlink" title="e.g. 使用 JSX 遍歷陣列"></a>e.g. 使用 JSX 遍歷陣列</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">import React from &apos;react&apos;</span><br><span class="line"></span><br><span class="line">class Hello extends React.Component &#123;</span><br><span class="line">  render () &#123;</span><br><span class="line">    const todoList = [&apos;Learning React&apos;, &apos;Learning English&apos;]</span><br><span class="line">    return (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &lt;h1&gt; Hello React &lt;/h1&gt;</span><br><span class="line">        &#123;/* 使用JSX語法處理陣列 */&#125;</span><br><span class="line">        &lt;ul&gt;</span><br><span class="line">          &#123;</span><br><span class="line">            todoList.map(node =&gt;</span><br><span class="line">              &lt;li&gt;&#123;node&#125;&lt;/li&gt;</span><br><span class="line">            )</span><br><span class="line">          &#125;</span><br><span class="line">        &lt;/ul&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    )</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">export default Hello</span><br></pre></td></tr></table></figure>
+<h3 id="e-g-三元表達式：狀態判斷-條件返回"><a href="#e-g-三元表達式：狀態判斷-條件返回" class="headerlink" title="e.g. 三元表達式：狀態判斷 (條件返回)"></a>e.g. 三元表達式：狀態判斷 (條件返回)</h3><p>JSX 語法也能使用在表達式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">import React from &apos;react&apos;</span><br><span class="line"></span><br><span class="line">class Hello extends React.Component &#123;</span><br><span class="line">  render () &#123;</span><br><span class="line">    const isLogin = false</span><br><span class="line">    return (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &lt;h1&gt; Hello React &lt;/h1&gt;</span><br><span class="line">        &#123;/* 三元表達式 */&#125;</span><br><span class="line">        &#123; isLogin ? &lt;p&gt;已經登入&lt;/p&gt; : &lt;p&gt;尚未登入&lt;/p&gt; &#125;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    )</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">export default Hello</span><br></pre></td></tr></table></figure></p>
+<h3 id="JSX-特例"><a href="#JSX-特例" class="headerlink" title="JSX 特例"></a>JSX 特例</h3><p>因為 <code>class</code> &amp; <code>for</code> 已經被 <code>JavaScript</code> 關鍵字佔用，因此需使用特例</p>
 <ul>
-<li><p>template</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">span.graph</span><br><span class="line">  i.line(v-if=&quot;node.content&quot; :style=&quot;&#123;width:lineWidth(node.content.rate)&#125;&quot;)</span><br></pre></td></tr></table></figure>
+<li><p>使用 <code>className</code> 代替 <code>class</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div className=&quot;style&quot;&gt; Hello World &lt;/div&gt;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>methods</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">lineWidth (item) &#123;</span><br><span class="line">  return item + &apos;%&apos;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>style.scss</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">.graph &#123;</span><br><span class="line">  display: flex;</span><br><span class="line">  width: 85%;</span><br><span class="line">  height: 6px;</span><br><span class="line">  background-color: #e6f8f9;</span><br><span class="line">  border-radius: $radius;</span><br><span class="line"></span><br><span class="line">  .line &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    height: 100%;</span><br><span class="line">    background-image: linear-gradient(to right, #ffeafe, #ccc1ff, #9ea9f0);</span><br><span class="line">    border-radius: $radius;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li><p>使用 <code>htmlFor</code> 代替 <code>for</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;label for=&apos;male&apos;&gt;Male&lt;/label&gt;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h2 id="運作邏輯"><a href="#運作邏輯" class="headerlink" title="運作邏輯"></a>運作邏輯</h2><p>負責執行前進變化的 ProgressBar，除去 width 之外，height 和 border-radius 必須和第一條 ProgressBar 相同，背景色則必須有所不同，才能出現覆蓋，達到前進的效果。</p>
-<p>接著，問題在於，如何讓 width 出現動態變化。透過 API 取得的值，傳參給函式 lineWidth()，在函式中將值進行轉換並 return，如此便達到 ProgressBar 會隨著 API 取回的值產生前進變化。</p>
+<h3 id="組件書寫特性"><a href="#組件書寫特性" class="headerlink" title="組件書寫特性"></a>組件書寫特性</h3><p>自定義 <code>component</code> 首字需大寫，這樣 JSX 才能識別為自定義還是原始 <code>HTML</code> 標籤。</p>
+<h2 id="Props-屬性"><a href="#Props-屬性" class="headerlink" title="Props 屬性"></a>Props 屬性</h2><p>組件近似於函式，接受特定的輸入 (props)，產出特定的輸出 (React elements)。</p>
+<h3 id="透過實例理解-props"><a href="#透過實例理解-props" class="headerlink" title="透過實例理解 props"></a>透過實例理解 props</h3><h4 id="e-g-NameCard"><a href="#e-g-NameCard" class="headerlink" title="e.g. NameCard"></a>e.g. NameCard</h4><p>安裝 <code>UI</code> 框架 <code>Bootstrap</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add bootstrap</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -517,9 +523,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Vue/" rel="tag"># Vue</a>
+            <a href="/tags/React/" rel="tag"># React</a>
           
-            <a href="/tags/頁面邏輯/" rel="tag"># 頁面邏輯</a>
+            <a href="/tags/Demo/" rel="tag"># Demo</a>
           
         </div>
       
@@ -532,8 +538,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/01/08/hexo-theme-next 設定/" rel="next" title="Next 設定">
-                <i class="fa fa-chevron-left"></i> Next 設定
+              <a href="/2019/06/16/tab-change/" rel="next" title="tab 選項卡切換內容">
+                <i class="fa fa-chevron-left"></i> tab 選項卡切換內容
               </a>
             
           </div>
@@ -541,10 +547,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/06/16/node-environment/" rel="prev" title="Node 環境搭建(新電腦)">
-                Node 環境搭建(新電腦) <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -717,7 +719,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#頁面結構"><span class="nav-number">1.</span> <span class="nav-text">頁面結構</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#準備一條當基底背景的-ProgressBar"><span class="nav-number">1.1.</span> <span class="nav-text">準備一條當基底背景的 ProgressBar</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#準備一條產生前進變化的-ProgressBar"><span class="nav-number">1.2.</span> <span class="nav-text">準備一條產生前進變化的 ProgressBar</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#運作邏輯"><span class="nav-number">2.</span> <span class="nav-text">運作邏輯</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#配置開發環境"><span class="nav-number">1.</span> <span class="nav-text">配置開發環境</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#install-官方腳手架工具-create-react-app"><span class="nav-number">1.1.</span> <span class="nav-text">install 官方腳手架工具 create-react-app</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#全域安裝"><span class="nav-number">1.1.1.</span> <span class="nav-text">全域安裝</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#啟動-demo"><span class="nav-number">1.1.2.</span> <span class="nav-text">啟動 demo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#運行"><span class="nav-number">1.1.3.</span> <span class="nav-text">運行</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第一個組件"><span class="nav-number">2.</span> <span class="nav-text">第一個組件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#建立-Hello-js"><span class="nav-number">2.1.</span> <span class="nav-text">建立 Hello.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#寫入-Hello-React-內容"><span class="nav-number">2.2.</span> <span class="nav-text">寫入 Hello React 內容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引入到-src-index-js"><span class="nav-number">2.3.</span> <span class="nav-text">引入到 src/index.js</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JSX-語法"><span class="nav-number">3.</span> <span class="nav-text">JSX 語法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#e-g-計算屬性"><span class="nav-number">3.1.</span> <span class="nav-text">e.g. 計算屬性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#e-g-使用-JSX-遍歷陣列"><span class="nav-number">3.2.</span> <span class="nav-text">e.g. 使用 JSX 遍歷陣列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#e-g-三元表達式：狀態判斷-條件返回"><span class="nav-number">3.3.</span> <span class="nav-text">e.g. 三元表達式：狀態判斷 (條件返回)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JSX-特例"><span class="nav-number">3.4.</span> <span class="nav-text">JSX 特例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#組件書寫特性"><span class="nav-number">3.5.</span> <span class="nav-text">組件書寫特性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Props-屬性"><span class="nav-number">4.</span> <span class="nav-text">Props 屬性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#透過實例理解-props"><span class="nav-number">4.1.</span> <span class="nav-text">透過實例理解 props</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#e-g-NameCard"><span class="nav-number">4.1.1.</span> <span class="nav-text">e.g. NameCard</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>

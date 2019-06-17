@@ -2,9 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://pittwu-hexo-blog.netlify.com/2019/06/16/react-textContent-demo/</loc>
+    
+    <lastmod>2019-06-16T23:55:00.293Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://pittwu-hexo-blog.netlify.com/2019/01/08/Vue-Cli%203.0%20Demo/</loc>
+    
+    <lastmod>2019-06-16T14:37:09.659Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://pittwu-hexo-blog.netlify.com/2019/06/16/tab-change/</loc>
     
-    <lastmod>2019-06-16T11:01:18.854Z</lastmod>
+    <lastmod>2019-06-16T14:36:40.655Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://pittwu-hexo-blog.netlify.com/2019/06/12/progressBar/</loc>
+    
+    <lastmod>2019-06-16T14:36:25.595Z</lastmod>
     
   </url>
   
@@ -37,23 +58,9 @@
   </url>
   
   <url>
-    <loc>https://pittwu-hexo-blog.netlify.com/2019/06/12/progressBar/</loc>
-    
-    <lastmod>2019-06-16T08:47:29.589Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://pittwu-hexo-blog.netlify.com/about/index.html</loc>
     
     <lastmod>2019-06-16T00:09:09.772Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://pittwu-hexo-blog.netlify.com/2019/01/08/Vue-Cli%203.0%20Demo/</loc>
-    
-    <lastmod>2019-01-08T06:39:10.000Z</lastmod>
     
   </url>
   
