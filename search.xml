@@ -1,8 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[面試問題：JavaScript]]></title>
+    <url>%2F2019%2F06%2F22%2Fquestion-javascript%2F</url>
+    <content type="text"><![CDATA[JavaScript 基礎知識問題整理。 Q1：console.log(a) 會印出什麼？1Uncaught ReferenceError: a is not defined JavaScript 是一種弱型別語言，宣告變數時，不需要先聲明類型。但如果沒有先建立變數的情況下，自然也會出現 ReferenceError。 Q2：JavaScript 目前有幾種型別？12345678910javascript 目前定義了七種型別，包含如下：1. number - 數字，譬如 1232. string - 字符串，譬如：&apos;Hello&apos;3. boolean - 布林，true、false4. null5. undefined6. object - 物件，&#123;name: pitt&#125;、[12, 34, 56]、function7. symbol(ES6 新增的型別)這七種型別可以區分為兩大類，分別是基本型別和物件型別，除了 object 外，其他都是基本型別。]]></content>
+      <tags>
+        <tag>面試</tag>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[前端面試問題整理]]></title>
+    <url>%2F2019%2F06%2F22%2Finterview-collection%2F</url>
+    <content type="text"><![CDATA[隨著工作越深入，很多時候會發現，自己有些基礎知識不夠扎實。為了補強這一部分，藉著整理面試問題，順便替自己複習基礎知識。 HTMLCSSJavaScriptJavaScript 問題整理]]></content>
+      <tags>
+        <tag>面試</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[tab 選項卡切換內容(下)]]></title>
+    <url>%2F2019%2F06%2F17%2Ftab-change-down%2F</url>
+    <content type="text"><![CDATA[施工中]]></content>
+      <tags>
+        <tag>Vue</tag>
+        <tag>頁面邏輯</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[React：簡單留言本實作]]></title>
-    <url>%2F2019%2F06%2F16%2Freact-textContent-demo%2F</url>
+    <url>%2F2019%2F06%2F16%2Freact-textcontent-demo%2F</url>
     <content type="text"><![CDATA[初步摸索 React 相關的基礎知識，簡單記錄一點實作的過程，方便日後查看。 配置開發環境install 官方腳手架工具 create-react-appGithub 網址 全域安裝1yarn add create-react-app -g 啟動 demo1create-react-app react-textcontent-demo 運行1cd react-textcontent-demo 1yarn start 第一個組件建立 Hello.jsmkdir src/Hello.js 寫入 Hello React 內容123456789import React from &apos;react&apos;class Hello extends React.Component &#123; render () &#123; return &lt;h1&gt; Hello React &lt;/h1&gt; &#125;&#125;export default Hello 引入到 src/index.js 引入 1import Hello from &apos;./Hello&apos; 掛載，此時可以看到畫面渲染出 Hello React 的畫面。 1ReactDOM.render(&lt;Hello /&gt;, document.getElementById(&apos;root&apos;)); JSX 語法JSX 語法是一種語法糖，近似於 JavaScript 的語法擴充，放棄模板語言的形式，採用更語意化可讀性更強的標籤。並且使用 {} 內嵌任何 JavaScript 表達式。 e.g. 計算屬性如下，JSX 會計算出 3 這個數字，並渲染到頁面上。123456789101112131415import React from &apos;react&apos;class Hello extends React.Component &#123; render () &#123; const todoList = [&apos;Learning React&apos;, &apos;Learning English&apos;] return ( &lt;div&gt; &lt;h1&gt; Hello React &lt;/h1&gt; &#123; 1+2 &#125; &lt;/div&gt; ) &#125;&#125;export default Hello e.g. 使用 JSX 遍歷陣列12345678910111213141516171819202122import React from &apos;react&apos;class Hello extends React.Component &#123; render () &#123; const todoList = [&apos;Learning React&apos;, &apos;Learning English&apos;] return ( &lt;div&gt; &lt;h1&gt; Hello React &lt;/h1&gt; &#123;/* 使用JSX語法處理陣列 */&#125; &lt;ul&gt; &#123; todoList.map(node =&gt; &lt;li&gt;&#123;node&#125;&lt;/li&gt; ) &#125; &lt;/ul&gt; &lt;/div&gt; ) &#125;&#125;export default Hello e.g. 三元表達式：狀態判斷 (條件返回)JSX 語法也能使用在表達式12345678910111213141516import React from &apos;react&apos;class Hello extends React.Component &#123; render () &#123; const isLogin = false return ( &lt;div&gt; &lt;h1&gt; Hello React &lt;/h1&gt; &#123;/* 三元表達式 */&#125; &#123; isLogin ? &lt;p&gt;已經登入&lt;/p&gt; : &lt;p&gt;尚未登入&lt;/p&gt; &#125; &lt;/div&gt; ) &#125;&#125;export default Hello JSX 特例因為 class &amp; for 已經被 JavaScript 關鍵字佔用，因此需使用特例 使用 className 代替 class 1&lt;div className=&quot;style&quot;&gt; Hello World &lt;/div&gt; 使用 htmlFor 代替 for 1&lt;label for=&apos;male&apos;&gt;Male&lt;/label&gt; 組件書寫特性自定義 component 首字需大寫，這樣 JSX 才能識別為自定義還是原始 HTML 標籤。 Props 屬性組件近似於函式，接受特定的輸入 (props)，產出特定的輸出 (React elements)。 透過實例理解 propse.g. NameCard安裝 UI 框架 Bootstrap1yarn add bootstrap]]></content>
       <tags>
         <tag>React</tag>
@@ -10,9 +36,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[tab 選項卡切換內容]]></title>
-    <url>%2F2019%2F06%2F16%2Ftab-change%2F</url>
-    <content type="text"><![CDATA[使用 tab 切換顯示內容，是常見的功能，記錄一下目前工作用的 tab 選項卡寫法。 準備 tab 列表這個列表可能是 API 給的值，也可能是前端自己組的靜態陣列，使用v-for語法渲染整個陣列。 index.vue template 1.tabTitle(v-for=&quot;(node, index) in itemList&quot;) 初始化一個用於點擊切換 tab 的參數 filter，並且初始化 tab 陣列 123456data () &#123; return &#123; filter: 0, itemList: [] &#125;&#125; 當頁面一進入時，就必須呼叫 API 函式，將取得的值傳入 tab 陣列 123created () &#123; this.ListService()&#125; methods 取得 API 的值 12345678getItemList () &#123; ListService.getItemList() .then((res) =&gt; &#123; this.itemList = res &#125;).catch((err) =&gt; &#123; console.log(err.message) &#125;)&#125; API 約定格式 12345678910result: [ &#123; name: &quot;選項一&quot;, data: [&#123;&#125;] &#125;, &#123; name: &quot;選項二&quot;, data: [&#123;&#125;] &#125;] 這時就能從 template 上，渲染出 tab 列表。 這邊多了一個 filterChange 的函式，用於執行點擊時，切換下方內容。 1234// 先用長度檢查 res 回傳是否正確.tabTitle(v-if=&quot;itemList.length &gt; 0&quot;) template(v-for=&quot;(node, index) in itemList&quot;) a.tabLink(@click=&quot;filterChange(index)&quot;) &#123;&#123;node.name&#125;&#125; methods 1234filterChange (index) &#123; this.filter = index this.subItemList = this.itemList[index].data&#125; 此處需修正，待補充名稱轉換通常 API 取回來的值，不一定符合前端需求，可能是英文或是數字，這時可以透過建立一個 formatter 函式來進行轉換。 準備轉換用的靜態對照表建立在 src/configs/site.js 中。1234export const TYPE = [ &#123; name: &apos;第一個名稱&apos;, value: &apos;0&apos;&#125;, &#123; name: &apos;第二個名稱&apos;, value: &apos;1&apos;&#125;] 回到 index.vue ，在 methods 中準備 formatter 函式。 此處少了引用寫法12345nameFormatter (val) &#123; let target = TYPE.find(node =&gt; node.value === val) if (target) return target.name else return val&#125; tab 點擊切換時，進行樣式變化幾乎無可避免，tab 切換時會被要求添加樣式來改善使用體驗。 透過 v-bind 綁定 classdata 中存有初始化的變數 filter ，這組參數將作為判斷機制，當點擊事件觸發時，filter 也隨之變化。當 filter === 陣列中的 index ，則觸發綁定 active class。 style.scss準備 tab 列表本身每個欄位的樣式，並事先給予一個偽元素 after 作為切換時變化用的樣式。但是先將 width 設為 0 使其不顯示。當 active 被觸發時，則將 after 偽元素賦予 width 的值，此時便可以正常顯示，同時也能做一些樣式的改變，達到點擊切換時樣式變化的效果。12345678910111213141516171819202122232425262728293031323334.tabLink &#123; position: relative; display: flex; align-items: center; justify-content: center; padding: 0 10px; height: 100%; font-size: 13px; white-space: nowrap; color: $base; flex-direction: column; cursor: pointer; &amp;.active &#123; font-weight: bold; color: $danger; &amp;::after &#123; width: 100%; &#125; &#125; &amp;::after &#123; @include position(absolute, n, 0, 0, 0); z-index: index($z-index, base); display: flex; width: 0; height: 2px; background-color: $danger; transition: .5s ease all; content: &quot;&quot;; &#125;&#125;]]></content>
+    <title><![CDATA[tab 選項卡切換內容(上)]]></title>
+    <url>%2F2019%2F06%2F16%2Ftab-change-up%2F</url>
+    <content type="text"><![CDATA[使用 tab 切換顯示內容，是常見的功能，記錄一下目前工作用的 tab 選項卡寫法。 準備 tab 列表這個列表可能是 API 給的值，也可能是前端自己組的靜態陣列，使用 v-for 語法渲染整個陣列。 index.vue template 1.tabTitle(v-for=&quot;(node, index) in itemList&quot;) 初始化一個用於點擊切換 tab 的參數 filter，並且初始化 tab 陣列 123456data () &#123; return &#123; filter: 0, itemList: [] &#125;&#125; 當頁面一進入時，就必須呼叫 API 函式，將取得的值傳入 tab 陣列 123created () &#123; this.ListService()&#125; methods 取得 API 的值 12345678getItemList () &#123; ListService.getItemList() .then((res) =&gt; &#123; this.itemList = res &#125;).catch((err) =&gt; &#123; console.log(err.message) &#125;)&#125; API 約定格式 12345678910result: [ &#123; name: &quot;選項一&quot;, data: [&#123;&#125;] &#125;, &#123; name: &quot;選項二&quot;, data: [&#123;&#125;] &#125;] 這時就能從 template 上，渲染出 tab 列表。 這邊多了一個 filterChange 的函式，用於執行點擊時，切換下方內容。 1234// 先用長度檢查 res 回傳是否正確.tabTitle(v-if=&quot;itemList.length &gt; 0&quot;) template(v-for=&quot;(node, index) in itemList&quot;) a.tabLink(@click=&quot;filterChange(index)&quot;) &#123;&#123;node.name&#125;&#125; methods 1234filterChange (index) &#123; this.filter = index this.subItemList = this.itemList[index].data&#125; 此處需修正，待補充名稱轉換通常 API 取回來的值，不一定符合前端需求，可能是英文或是數字，這時可以透過建立一個 formatter 函式來進行轉換。 準備轉換用的靜態對照表建立在 src/configs/site.js 中。1234export const TYPE = [ &#123; name: &apos;第一個名稱&apos;, value: &apos;0&apos;&#125;, &#123; name: &apos;第二個名稱&apos;, value: &apos;1&apos;&#125;] 回到 index.vue ，在 script 中引入對照表。1import &#123; TYPE &#125; from &apos;@/configs/site&apos; 並在 methods 中準備 formatter 函式。12345nameFormatter (val) &#123; let target = TYPE.find(node =&gt; node.value === val) if (target) return target.name else return val&#125; 渲染到 template 上。123.tabTitle(v-if=&quot;itemList.length &gt; 0&quot;) template(v-for=&quot;(node, index) in itemList&quot;) a.tabLink(@click=&quot;filterChange(index)&quot;) &#123;&#123;nameFormatter(node.name)&#125;&#125; tab 點擊切換時，進行樣式變化幾乎無可避免，tab 切換時會被要求添加樣式來改善使用體驗。 透過 v-bind 綁定 classdata 中存有初始化的變數 filter ，這組參數將作為判斷機制，當點擊事件觸發時，filter 也隨之變化。當 filter === 陣列中的 index ，則觸發綁定 active class。 style.scss準備 tab 列表本身每個欄位的樣式，並事先給予一個偽元素 after 作為切換時變化用的樣式。但是先將 width 設為 0 使其不顯示。當 active 被觸發時，則將 after 偽元素賦予 width 的值，此時便可以正常顯示，同時也能做一些樣式的改變，達到點擊切換時樣式變化的效果。12345678910111213141516171819202122232425262728293031323334.tabLink &#123; position: relative; display: flex; align-items: center; justify-content: center; padding: 0 10px; height: 100%; font-size: 13px; white-space: nowrap; color: $base; flex-direction: column; cursor: pointer; &amp;.active &#123; font-weight: bold; color: $danger; &amp;::after &#123; width: 100%; &#125; &#125; &amp;::after &#123; @include position(absolute, n, 0, 0, 0); z-index: index($z-index, base); display: flex; width: 0; height: 2px; background-color: $danger; transition: .5s ease all; content: &quot;&quot;; &#125;&#125;]]></content>
       <tags>
         <tag>Vue</tag>
         <tag>頁面邏輯</tag>
@@ -23,8 +49,8 @@
     <url>%2F2019%2F06%2F16%2Fnode-environment%2F</url>
     <content type="text"><![CDATA[環境搭建是件挺麻煩的事情，很常踩到各種坑，記錄一下近期安裝流程。方便下次快速排查問題。 安裝 HomebrewHomebrew 是 mac 套件管理工具，透過它來安裝 nvm Homebrew 官網 安裝指令1/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot; 安裝 nvmNode.js 的版本更迭速度很快，為了有效率管理 Node 版本，使用 nvm 工具進行 Node 版本切換與安裝。 nvm github curl 安裝 nvm 1curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash Homebrew 安裝 nvm 1brew install nvm 測試 nvm 是否安裝成功1nvm --version 但這時 iterm 另開分頁，測試nvm --version，有極大機率會nvm: command not found，所以為了解決這個問題，需要修改.bash_profile文件。 編輯 .bash_profile 文件1vi .bash_profile 複製下列代碼進入文件後，按 i 切換到修改模式，將複製的代碼貼上。12export NVM_DIR=&quot;$HOME/.nvm&quot;[ -s &quot;$NVM_DIR/nvm.sh&quot; ] &amp;&amp; . &quot;$NVM_DIR/nvm.sh&quot; 按 esc 退出修改模式，接著按 :wq 保存修改後的結果。 生效1source .bash_profile 安裝 Node使用 nvm 指令查詢並安裝 node 查詢遠端 node 版本1nvm ls-remote 安裝需要的 node 版本1nvm install v11.15.0 切換需要使用的 node 版本1nvm use v11.15.0 設定預設使用的 node 版本1nvm alias default v11.15.0]]></content>
       <tags>
-        <tag>nvm</tag>
         <tag>node</tag>
+        <tag>nvm</tag>
         <tag>環境</tag>
       </tags>
   </entry>

@@ -98,32 +98,25 @@
 
 
 
-  <meta name="description" content="vue-cli 3.0 版本已經釋出一段時間，考慮到後續工作專案會開始採用，也必須著手實作了解一下。">
-<meta name="keywords" content="Vue,vue-cli">
+  <meta name="description" content="使用 tab 切換顯示內容，是常見的功能，記錄一下目前工作用的 tab 選項卡寫法。">
+<meta name="keywords" content="Vue,頁面邏輯">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Vue-Cli 3.0 Demo">
-<meta property="og:url" content="https://pittwu-hexo-blog.netlify.com/2019/01/08/Vue-Cli 3.0 Demo/index.html">
+<meta property="og:title" content="tab 選項卡切換內容(上)">
+<meta property="og:url" content="https://pittwu-hexo-blog.netlify.com/2019/06/16/tab-change-up/index.html">
 <meta property="og:site_name" content="Pitt Wu&#39;s Blog">
-<meta property="og:description" content="vue-cli 3.0 版本已經釋出一段時間，考慮到後續工作專案會開始採用，也必須著手實作了解一下。">
+<meta property="og:description" content="使用 tab 切換顯示內容，是常見的功能，記錄一下目前工作用的 tab 選項卡寫法。">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:image" content="https://pittwu-hexo-blog.netlify.com/2019/01/08/Vue-Cli%203.0%20Demo/select.png">
-<meta property="og:image" content="https://pittwu-hexo-blog.netlify.com/2019/01/08/Vue-Cli%203.0%20Demo/space-select.png">
-<meta property="og:image" content="https://i.imgur.com/KdPyhMA.png">
-<meta property="og:image" content="https://i.imgur.com/98UuQvU.png">
-<meta property="og:image" content="https://i.imgur.com/VwVIwNo.png">
-<meta property="og:image" content="https://i.imgur.com/XVfShLK.png">
-<meta property="og:updated_time" content="2019-06-16T14:37:10.000Z">
+<meta property="og:updated_time" content="2019-06-17T03:30:14.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Vue-Cli 3.0 Demo">
-<meta name="twitter:description" content="vue-cli 3.0 版本已經釋出一段時間，考慮到後續工作專案會開始採用，也必須著手實作了解一下。">
-<meta name="twitter:image" content="https://pittwu-hexo-blog.netlify.com/2019/01/08/Vue-Cli%203.0%20Demo/select.png">
+<meta name="twitter:title" content="tab 選項卡切換內容(上)">
+<meta name="twitter:description" content="使用 tab 切換顯示內容，是常見的功能，記錄一下目前工作用的 tab 選項卡寫法。">
 
 
 
 
 
 
-  <link rel="canonical" href="https://pittwu-hexo-blog.netlify.com/2019/01/08/Vue-Cli 3.0 Demo/">
+  <link rel="canonical" href="https://pittwu-hexo-blog.netlify.com/2019/06/16/tab-change-up/">
 
 
 
@@ -133,7 +126,7 @@
   };
 </script>
 
-  <title>Vue-Cli 3.0 Demo | Pitt Wu's Blog</title>
+  <title>tab 選項卡切換內容(上) | Pitt Wu's Blog</title>
   
 
 
@@ -371,7 +364,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://pittwu-hexo-blog.netlify.com/2019/01/08/Vue-Cli 3.0 Demo/">
+    <link itemprop="mainEntityOfPage" href="https://pittwu-hexo-blog.netlify.com/2019/06/16/tab-change-up/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Pitt Wu">
@@ -388,7 +381,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Vue-Cli 3.0 Demo
+          <h1 class="post-title" itemprop="name headline">tab 選項卡切換內容(上)
 
               
             
@@ -414,7 +407,7 @@
                 
               
 
-              <time title="Created: 2019-01-08 00:13:54" itemprop="dateCreated datePublished" datetime="2019-01-08T00:13:54+08:00">2019-01-08</time>
+              <time title="Created: 2019-06-16 18:07:04" itemprop="dateCreated datePublished" datetime="2019-06-16T18:07:04+08:00">2019-06-16</time>
             
 
             
@@ -431,7 +424,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-06-16 22:37:10" itemprop="dateModified" datetime="2019-06-16T22:37:10+08:00">2019-06-16</time>
+                <time title="Modified: 2019-06-17 11:30:14" itemprop="dateModified" datetime="2019-06-17T11:30:14+08:00">2019-06-17</time>
               
             
           </span>
@@ -444,7 +437,7 @@
 
           
           
-             <span id="/2019/01/08/Vue-Cli 3.0 Demo/" class="leancloud_visitors" data-flag-title="Vue-Cli 3.0 Demo">
+             <span id="/2019/06/16/tab-change-up/" class="leancloud_visitors" data-flag-title="tab 選項卡切換內容(上)">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -475,27 +468,48 @@
       
 
       
-        <p>vue-cli 3.0 版本已經釋出一段時間，考慮到後續工作專案會開始採用，也必須著手實作了解一下。<br><a id="more"></a><br><a href="https://cli.vuejs.org/zh/" target="_blank" rel="noopener">Vue-Cli 官網</a></p>
-<h2 id="與-2-0-版本差異"><a href="#與-2-0-版本差異" class="headerlink" title="與 2.0 版本差異"></a>與 2.0 版本差異</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. 新增GUI介面，可以不需使用指令。</span><br><span class="line">2. 更好的兼容支援TypeScript。</span><br><span class="line">3. 傳統在2.0版本的webpack配置，在GUI介面除了可使用下拉選擇方式，也多了更多的說明介紹。</span><br></pre></td></tr></table></figure>
-<h2 id="安裝流程"><a href="#安裝流程" class="headerlink" title="安裝流程"></a>安裝流程</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 安裝方式(須移除舊版本Vue-Cli 1.x or 2.x)</span><br><span class="line"></span><br><span class="line">npm uninstall vue-cli -g</span><br><span class="line"># or</span><br><span class="line">yarn global remove vue-cli</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 前置要求：Node版本最低需8.9或更高(官方推薦8.11.0以上)</span><br><span class="line">// 安裝指令</span><br><span class="line"></span><br><span class="line">npm install -g @vue/cli</span><br><span class="line"># or</span><br><span class="line">yarn global add @vue/cli</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// 確認是否install成功，檢查版本號</span><br><span class="line"></span><br><span class="line">vue --version</span><br><span class="line"># or</span><br><span class="line">vue -V</span><br><span class="line"></span><br><span class="line"># 2019/1/8 v3.3.0</span><br></pre></td></tr></table></figure>
-<h4 id="測試兩種專案結果"><a href="#測試兩種專案結果" class="headerlink" title="測試兩種專案結果"></a>測試兩種專案結果</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">A專案是以vue-cli 2.x版本時建立</span><br><span class="line"></span><br><span class="line">移除vue-cli 2.x 並安裝vue-cli 3.0後</span><br><span class="line"></span><br><span class="line">create B專案，再回頭重新以3.0環境啟動A專案，可正常運行</span><br><span class="line">差別在於2.x版本的啟動指令仍是yarn run dev</span><br><span class="line">而3.0則改用yarn serve</span><br></pre></td></tr></table></figure>
-<h2 id="兩種創建專案方式-command-line-GUI"><a href="#兩種創建專案方式-command-line-GUI" class="headerlink" title="兩種創建專案方式(command-line || GUI)"></a>兩種創建專案方式(command-line || GUI)</h2><h3 id="command-line"><a href="#command-line" class="headerlink" title="command-line"></a>command-line</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue create 專案名稱</span><br></pre></td></tr></table></figure>
-<h4 id="選擇預設套件或是手動選擇"><a href="#選擇預設套件或是手動選擇" class="headerlink" title="選擇預設套件或是手動選擇"></a>選擇預設套件或是手動選擇</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 第一次在3.0環境建立專案時，僅有上述兩種選項</span><br><span class="line">// 當建立過一次模板環境後，可以選擇save，在第二次建立時，可以選用</span><br></pre></td></tr></table></figure>
-<img src="/2019/01/08/Vue-Cli%203.0%20Demo/select.png">
-<h4 id="依需求選擇安裝項目"><a href="#依需求選擇安裝項目" class="headerlink" title="依需求選擇安裝項目"></a>依需求選擇安裝項目</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">按 space 選擇需安裝的項目</span><br></pre></td></tr></table></figure>
-<img src="/2019/01/08/Vue-Cli%203.0%20Demo/space-select.png">
-<h4 id="ESlint選規範版本"><a href="#ESlint選規範版本" class="headerlink" title="ESlint選規範版本"></a>ESlint選規範版本</h4><p><img src="https://i.imgur.com/KdPyhMA.png" alt=""></p>
-<h4 id="每次儲存時檢查代碼規範或commit時檢查"><a href="#每次儲存時檢查代碼規範或commit時檢查" class="headerlink" title="每次儲存時檢查代碼規範或commit時檢查"></a>每次儲存時檢查代碼規範或commit時檢查</h4><p><img src="https://i.imgur.com/98UuQvU.png" alt=""></p>
-<h4 id="安裝在package-json內或獨立安裝"><a href="#安裝在package-json內或獨立安裝" class="headerlink" title="安裝在package.json內或獨立安裝"></a>安裝在package.json內或獨立安裝</h4><p><img src="https://i.imgur.com/VwVIwNo.png" alt=""></p>
-<h4 id="是否保存這次建立的選項-提供下次專案直接套用"><a href="#是否保存這次建立的選項-提供下次專案直接套用" class="headerlink" title="是否保存這次建立的選項(提供下次專案直接套用)"></a>是否保存這次建立的選項(提供下次專案直接套用)</h4><p><img src="https://i.imgur.com/XVfShLK.png" alt=""></p>
-<h3 id="GUI-創建-建議暫時擱置不使用，尚未穩定"><a href="#GUI-創建-建議暫時擱置不使用，尚未穩定" class="headerlink" title="GUI 創建(建議暫時擱置不使用，尚未穩定)"></a>GUI 創建(建議暫時擱置不使用，尚未穩定)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 安裝完成vue-cli 3.0環境後，輸入指令vue ui</span><br><span class="line"></span><br><span class="line">// 家中 mac 測試，GUI 工具會有持續 loading 的 error 問題</span><br><span class="line">// 查官方 issues 這一類的問題相當多，3.0.0 版本時全域安裝core.js可解</span><br></pre></td></tr></table></figure>
-<h2 id="資料夾結構"><a href="#資料夾結構" class="headerlink" title="資料夾結構"></a>資料夾結構</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">vue-cli 3.0 版本對應的是 webpack4.0 以上版本。</span><br><span class="line"></span><br><span class="line">因為官方不希望開發者花費過多精力調整webpack設定，</span><br><span class="line"></span><br><span class="line">因此統一移入node_modules</span><br></pre></td></tr></table></figure>
-<h3 id="路徑如下："><a href="#路徑如下：" class="headerlink" title="路徑如下："></a>路徑如下：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">node_modules/@vue/cli-service/webpack.config.js</span><br><span class="line"></span><br><span class="line">// Service.js</span><br><span class="line"></span><br><span class="line">node_modules/@vue/cli-service/lib/Service.js</span><br></pre></td></tr></table></figure>
-<h3 id="引入路徑名稱"><a href="#引入路徑名稱" class="headerlink" title="引入路徑名稱"></a>引入路徑名稱</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 在 3.0 版本需注意引入路徑名稱和2.x有所差異</span><br><span class="line"></span><br><span class="line">e.g.</span><br><span class="line">import HelloWorld from &apos;@/components/HelloWorld.vue&apos;</span><br><span class="line"></span><br><span class="line">副檔名中.vue 在 3.0 版本不可被省略。</span><br></pre></td></tr></table></figure>
-<h3 id="index-html"><a href="#index-html" class="headerlink" title="index.html"></a>index.html</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">過往會被放在根目錄下，3.0 版本改至 public 下</span><br></pre></td></tr></table></figure>
-<h3 id="測試打包"><a href="#測試打包" class="headerlink" title="測試打包"></a>測試打包</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn build</span><br></pre></td></tr></table></figure>
+        <p>使用 tab 切換顯示內容，是常見的功能，記錄一下目前工作用的 tab 選項卡寫法。<br><a id="more"></a></p>
+<h2 id="準備-tab-列表"><a href="#準備-tab-列表" class="headerlink" title="準備 tab 列表"></a>準備 tab 列表</h2><p>這個列表可能是 API 給的值，也可能是前端自己組的靜態陣列，使用 <code>v-for</code> 語法渲染整個陣列。</p>
+<ul>
+<li><p>index.vue</p>
+<ul>
+<li><p>template</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.tabTitle(v-for=&quot;(node, index) in itemList&quot;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>初始化一個用於點擊切換 tab 的參數 filter，並且初始化 tab 陣列</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">data () &#123;</span><br><span class="line">  return &#123;</span><br><span class="line">    filter: 0,</span><br><span class="line">    itemList: []</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>當頁面一進入時，就必須呼叫 API 函式，將取得的值傳入 tab 陣列</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">created () &#123;</span><br><span class="line">  this.ListService()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>methods 取得 API 的值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">getItemList () &#123;</span><br><span class="line">  ListService.getItemList()</span><br><span class="line">    .then((res) =&gt; &#123;</span><br><span class="line">      this.itemList = res</span><br><span class="line">    &#125;).catch((err) =&gt; &#123;</span><br><span class="line">      console.log(err.message)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>API 約定格式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">result: [</span><br><span class="line">    &#123;</span><br><span class="line">        name: &quot;選項一&quot;,</span><br><span class="line">        data: [&#123;&#125;]</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        name: &quot;選項二&quot;,</span><br><span class="line">        data: [&#123;&#125;]</span><br><span class="line">    &#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>這時就能從 template 上，渲染出 tab 列表。</p>
+</li>
+<li><p>這邊多了一個 <code>filterChange</code> 的函式，用於執行點擊時，切換下方內容。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 先用長度檢查 res 回傳是否正確</span><br><span class="line">.tabTitle(v-if=&quot;itemList.length &gt; 0&quot;)</span><br><span class="line">  template(v-for=&quot;(node, index) in itemList&quot;)</span><br><span class="line">    a.tabLink(@click=&quot;filterChange(index)&quot;) &#123;&#123;node.name&#125;&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>methods</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">filterChange (index) &#123;</span><br><span class="line">  this.filter = index</span><br><span class="line">  this.subItemList = this.itemList[index].data</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="此處需修正，待補充"><a href="#此處需修正，待補充" class="headerlink" title="此處需修正，待補充"></a>此處需修正，待補充</h2><h2 id="名稱轉換"><a href="#名稱轉換" class="headerlink" title="名稱轉換"></a>名稱轉換</h2><p>通常 API 取回來的值，不一定符合前端需求，可能是英文或是數字，這時可以透過建立一個 <code>formatter</code> 函式來進行轉換。</p>
+<h3 id="準備轉換用的靜態對照表"><a href="#準備轉換用的靜態對照表" class="headerlink" title="準備轉換用的靜態對照表"></a>準備轉換用的靜態對照表</h3><p>建立在 <code>src/configs/site.js</code> 中。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">export const TYPE = [</span><br><span class="line">    &#123; name: &apos;第一個名稱&apos;, value: &apos;0&apos;&#125;,</span><br><span class="line">    &#123; name: &apos;第二個名稱&apos;, value: &apos;1&apos;&#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure></p>
+<p>回到 <code>index.vue</code> ，在 <code>script</code> 中引入對照表。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import &#123; TYPE &#125; from &apos;@/configs/site&apos;</span><br></pre></td></tr></table></figure></p>
+<p>並在 <code>methods</code> 中準備 <code>formatter</code> 函式。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">nameFormatter (val) &#123;</span><br><span class="line">  let target = TYPE.find(node =&gt; node.value === val)</span><br><span class="line">  if (target) return target.name</span><br><span class="line">  else return val</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>渲染到 <code>template</code> 上。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.tabTitle(v-if=&quot;itemList.length &gt; 0&quot;)</span><br><span class="line">  template(v-for=&quot;(node, index) in itemList&quot;)</span><br><span class="line">    a.tabLink(@click=&quot;filterChange(index)&quot;) &#123;&#123;nameFormatter(node.name)&#125;&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="tab-點擊切換時，進行樣式變化"><a href="#tab-點擊切換時，進行樣式變化" class="headerlink" title="tab 點擊切換時，進行樣式變化"></a>tab 點擊切換時，進行樣式變化</h2><p>幾乎無可避免，tab 切換時會被要求添加樣式來改善使用體驗。</p>
+<h3 id="透過-v-bind-綁定-class"><a href="#透過-v-bind-綁定-class" class="headerlink" title="透過 v-bind 綁定 class"></a>透過 v-bind 綁定 class</h3><p><code>data</code> 中存有初始化的變數 <code>filter</code> ，這組參數將作為判斷機制，當點擊事件觸發時，<code>filter</code> 也隨之變化。當 <code>filter</code> === 陣列中的 <code>index</code> ，則觸發綁定 <code>active</code> class。</p>
+<ul>
+<li>style.scss<br>準備 tab 列表本身每個欄位的樣式，並事先給予一個偽元素 <code>after</code> 作為切換時變化用的樣式。但是先將 <code>width</code> 設為 0 使其不顯示。當 <code>active</code> 被觸發時，則將 <code>after</code> 偽元素賦予 <code>width</code> 的值，此時便可以正常顯示，同時也能做一些樣式的改變，達到點擊切換時樣式變化的效果。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">.tabLink &#123;</span><br><span class="line">  position: relative;</span><br><span class="line">  display: flex;</span><br><span class="line">  align-items: center;</span><br><span class="line">  justify-content: center;</span><br><span class="line">  padding: 0 10px;</span><br><span class="line">  height: 100%;</span><br><span class="line">  font-size: 13px;</span><br><span class="line">  white-space: nowrap;</span><br><span class="line">  color: $base;</span><br><span class="line">  flex-direction: column;</span><br><span class="line">  cursor: pointer;</span><br><span class="line"></span><br><span class="line">  &amp;.active &#123;</span><br><span class="line">    font-weight: bold;</span><br><span class="line">    color: $danger;</span><br><span class="line"></span><br><span class="line">    &amp;::after &#123;</span><br><span class="line">      width: 100%;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  &amp;::after &#123;</span><br><span class="line">    @include position(absolute, n, 0, 0, 0);</span><br><span class="line"></span><br><span class="line">    z-index: index($z-index, base);</span><br><span class="line">    display: flex;</span><br><span class="line">    width: 0;</span><br><span class="line">    height: 2px;</span><br><span class="line">    background-color: $danger;</span><br><span class="line">    transition: .5s ease all;</span><br><span class="line">    content: &quot;&quot;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+
       
     </div>
 
@@ -520,7 +534,7 @@
           
             <a href="/tags/Vue/" rel="tag"># Vue</a>
           
-            <a href="/tags/vue-cli/" rel="tag"># vue-cli</a>
+            <a href="/tags/頁面邏輯/" rel="tag"># 頁面邏輯</a>
           
         </div>
       
@@ -533,8 +547,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/01/03/node-version-fixed/" rel="next" title="Node 版本路徑修復">
-                <i class="fa fa-chevron-left"></i> Node 版本路徑修復
+              <a href="/2019/06/16/node-environment/" rel="next" title="Node 環境搭建(新電腦)">
+                <i class="fa fa-chevron-left"></i> Node 環境搭建(新電腦)
               </a>
             
           </div>
@@ -543,8 +557,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/01/08/nvm-instruction/" rel="prev" title="nvm 常用指令">
-                nvm 常用指令 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/06/16/react-textcontent-demo/" rel="prev" title="React：簡單留言本實作">
+                React：簡單留言本實作 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -722,7 +736,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#與-2-0-版本差異"><span class="nav-number">1.</span> <span class="nav-text">與 2.0 版本差異</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安裝流程"><span class="nav-number">2.</span> <span class="nav-text">安裝流程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#測試兩種專案結果"><span class="nav-number">2.0.1.</span> <span class="nav-text">測試兩種專案結果</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#兩種創建專案方式-command-line-GUI"><span class="nav-number">3.</span> <span class="nav-text">兩種創建專案方式(command-line || GUI)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#command-line"><span class="nav-number">3.1.</span> <span class="nav-text">command-line</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#選擇預設套件或是手動選擇"><span class="nav-number">3.1.1.</span> <span class="nav-text">選擇預設套件或是手動選擇</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#依需求選擇安裝項目"><span class="nav-number">3.1.2.</span> <span class="nav-text">依需求選擇安裝項目</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ESlint選規範版本"><span class="nav-number">3.1.3.</span> <span class="nav-text">ESlint選規範版本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#每次儲存時檢查代碼規範或commit時檢查"><span class="nav-number">3.1.4.</span> <span class="nav-text">每次儲存時檢查代碼規範或commit時檢查</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安裝在package-json內或獨立安裝"><span class="nav-number">3.1.5.</span> <span class="nav-text">安裝在package.json內或獨立安裝</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#是否保存這次建立的選項-提供下次專案直接套用"><span class="nav-number">3.1.6.</span> <span class="nav-text">是否保存這次建立的選項(提供下次專案直接套用)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GUI-創建-建議暫時擱置不使用，尚未穩定"><span class="nav-number">3.2.</span> <span class="nav-text">GUI 創建(建議暫時擱置不使用，尚未穩定)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#資料夾結構"><span class="nav-number">4.</span> <span class="nav-text">資料夾結構</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#路徑如下："><span class="nav-number">4.1.</span> <span class="nav-text">路徑如下：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引入路徑名稱"><span class="nav-number">4.2.</span> <span class="nav-text">引入路徑名稱</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#index-html"><span class="nav-number">4.3.</span> <span class="nav-text">index.html</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#測試打包"><span class="nav-number">4.4.</span> <span class="nav-text">測試打包</span></a></li></ol></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#準備-tab-列表"><span class="nav-number">1.</span> <span class="nav-text">準備 tab 列表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#此處需修正，待補充"><span class="nav-number">2.</span> <span class="nav-text">此處需修正，待補充</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#名稱轉換"><span class="nav-number">3.</span> <span class="nav-text">名稱轉換</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#準備轉換用的靜態對照表"><span class="nav-number">3.1.</span> <span class="nav-text">準備轉換用的靜態對照表</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tab-點擊切換時，進行樣式變化"><span class="nav-number">4.</span> <span class="nav-text">tab 點擊切換時，進行樣式變化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#透過-v-bind-綁定-class"><span class="nav-number">4.1.</span> <span class="nav-text">透過 v-bind 綁定 class</span></a></li></ol></li></ol></div>
             
 
           </div>
