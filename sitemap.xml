@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://pittwu-hexo-blog.netlify.com/2019/06/23/es6-destructuring/</loc>
+    
+    <lastmod>2019-06-23T16:08:54.913Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://pittwu-hexo-blog.netlify.com/demo/index.html</loc>
+    
+    <lastmod>2019-06-23T09:52:20.407Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://pittwu-hexo-blog.netlify.com/collection/index.html</loc>
     
-    <lastmod>2019-06-23T09:35:37.282Z</lastmod>
+    <lastmod>2019-06-23T09:47:54.971Z</lastmod>
     
   </url>
   

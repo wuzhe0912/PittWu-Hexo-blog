@@ -98,25 +98,25 @@
 
 
 
-  <meta name="description" content="動手安裝 Hexo 過程中踩了一些坑，順手記錄自己 google 到的解法。">
-<meta name="keywords" content="Hexo">
+  <meta name="description" content="輕便且快速地取出元素：解構賦值。">
+<meta name="keywords" content="ES6">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo 踩坑記">
-<meta property="og:url" content="https://pittwu-hexo-blog.netlify.com/2019/01/03/fixed-error/index.html">
+<meta property="og:title" content="ES6：解構賦值">
+<meta property="og:url" content="https://pittwu-hexo-blog.netlify.com/2019/06/23/es6-destructuring/index.html">
 <meta property="og:site_name" content="Pitt Wu&#39;s Blog">
-<meta property="og:description" content="動手安裝 Hexo 過程中踩了一些坑，順手記錄自己 google 到的解法。">
+<meta property="og:description" content="輕便且快速地取出元素：解構賦值。">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:updated_time" content="2019-01-04T15:14:30.000Z">
+<meta property="og:updated_time" content="2019-06-23T16:08:54.913Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo 踩坑記">
-<meta name="twitter:description" content="動手安裝 Hexo 過程中踩了一些坑，順手記錄自己 google 到的解法。">
+<meta name="twitter:title" content="ES6：解構賦值">
+<meta name="twitter:description" content="輕便且快速地取出元素：解構賦值。">
 
 
 
 
 
 
-  <link rel="canonical" href="https://pittwu-hexo-blog.netlify.com/2019/01/03/fixed-error/">
+  <link rel="canonical" href="https://pittwu-hexo-blog.netlify.com/2019/06/23/es6-destructuring/">
 
 
 
@@ -126,7 +126,7 @@
   };
 </script>
 
-  <title>Hexo 踩坑記 | Pitt Wu's Blog</title>
+  <title>ES6：解構賦值 | Pitt Wu's Blog</title>
   
 
 
@@ -369,7 +369,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://pittwu-hexo-blog.netlify.com/2019/01/03/fixed-error/">
+    <link itemprop="mainEntityOfPage" href="https://pittwu-hexo-blog.netlify.com/2019/06/23/es6-destructuring/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Pitt Wu">
@@ -386,7 +386,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hexo 踩坑記
+          <h1 class="post-title" itemprop="name headline">ES6：解構賦值
 
               
             
@@ -412,7 +412,7 @@
                 
               
 
-              <time title="Created: 2019-01-03 22:43:30" itemprop="dateCreated datePublished" datetime="2019-01-03T22:43:30+08:00">2019-01-03</time>
+              <time title="Created: 2019-06-23 17:42:42" itemprop="dateCreated datePublished" datetime="2019-06-23T17:42:42+08:00">2019-06-23</time>
             
 
             
@@ -429,7 +429,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-01-04 23:14:30" itemprop="dateModified" datetime="2019-01-04T23:14:30+08:00">2019-01-04</time>
+                <time title="Modified: 2019-06-24 00:08:54" itemprop="dateModified" datetime="2019-06-24T00:08:54+08:00">2019-06-24</time>
               
             
           </span>
@@ -442,7 +442,7 @@
 
           
           
-             <span id="/2019/01/03/fixed-error/" class="leancloud_visitors" data-flag-title="Hexo 踩坑記">
+             <span id="/2019/06/23/es6-destructuring/" class="leancloud_visitors" data-flag-title="ES6：解構賦值">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -473,9 +473,23 @@
       
 
       
-        <p>動手安裝 Hexo 過程中踩了一些坑，順手記錄自己 google 到的解法。<br><a id="more"></a></p>
-<h2 id="hexo-g-生成路徑錯誤導致樣式跑版"><a href="#hexo-g-生成路徑錯誤導致樣式跑版" class="headerlink" title="hexo g 生成路徑錯誤導致樣式跑版"></a>hexo g 生成路徑錯誤導致樣式跑版</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">hexo g 是 hexo 打包的指令，但若未調整生成路徑，則會出現打包後檔案路徑錯誤，</span><br><span class="line"></span><br><span class="line">導致開啟時，整個樣式跑版。</span><br><span class="line"></span><br><span class="line">要解決這個問題，需打開 _config.yml</span><br><span class="line"></span><br><span class="line">檢查 url 和 root 兩個項目</span><br><span class="line"></span><br><span class="line">以部署到 github-page 為例：</span><br><span class="line"></span><br><span class="line">url 為專案所在位置：</span><br><span class="line">https://wuzhe0912.github.io/PittWu-Hexo/</span><br><span class="line"></span><br><span class="line">root 則填上專案名稱：</span><br><span class="line">/PittWu-Hexo/</span><br><span class="line"></span><br><span class="line">完成修改後，重整 github-page，即可修正樣式錯誤問題。</span><br></pre></td></tr></table></figure>
-<h2 id="Next-主題背景動畫配置無效果"><a href="#Next-主題背景動畫配置無效果" class="headerlink" title="Next 主題背景動畫配置無效果"></a>Next 主題背景動畫配置無效果</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Next 在5.x版本時，設定背景動畫效果，僅需在 _config.yml 調整 true or false 即有效果。</span><br><span class="line"></span><br><span class="line">但在6.X版本，不知道因為何種原因，這種設置方式完全失效。</span><br><span class="line">因此改採用下述三個步驟設置動畫效果。</span><br><span class="line"></span><br><span class="line">e.g. 選擇 canvas_nest 這個效果</span><br><span class="line"></span><br><span class="line">1. cd themes/next</span><br><span class="line">2. git clone https://github.com/theme-next/theme-next-canvas-nest source / lib / canvas-nest</span><br><span class="line">3. next/_config.yml 設定 enable: true</span><br><span class="line"></span><br><span class="line">其他三種動畫效果，同前述。</span><br></pre></td></tr></table></figure>
+        <p>輕便且快速地取出元素：解構賦值。<br><a id="more"></a></p>
+<h2 id="陣列解構"><a href="#陣列解構" class="headerlink" title="陣列解構"></a>陣列解構</h2><p>若有一個陣列如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let numArray = [2, 4, 6]</span><br></pre></td></tr></table></figure></p>
+<p>可以透過下面兩種方法進行解構<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// 方法一</span><br><span class="line">let [subNode, subItem] = numArray</span><br><span class="line"></span><br><span class="line">// 方法二</span><br><span class="line">let subNode</span><br><span class="line">let subItem</span><br><span class="line">[subNode, subItem] = numArray</span><br></pre></td></tr></table></figure></p>
+<p>這兩種方法，都會拿到相同結果。當陣列解構後，就可以進行一般運算或處理。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let res = subNode * subItem</span><br><span class="line">console.log(res)  // 印出8</span><br></pre></td></tr></table></figure></p>
+<h2 id="預設值"><a href="#預設值" class="headerlink" title="預設值"></a>預設值</h2><p>如果無法預期拿到陣列內容為何？透過預設值，可以避免缺少值的問題。<br>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">let numArray = [2, 4]</span><br><span class="line"></span><br><span class="line">let [first, second, third] = numArray</span><br><span class="line"></span><br><span class="line">first + second + third  // 這邊做計算的話，會產生 NaN</span><br></pre></td></tr></table></figure></p>
+<p>但如果透過預設值為0，則能避免上面的問題<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let [first, second, third = 0] = numArray</span><br></pre></td></tr></table></figure></p>
+<h2 id="忽略元素"><a href="#忽略元素" class="headerlink" title="忽略元素"></a>忽略元素</h2><p>意指，僅調用陣列中某一元素。可以透過前面的值為空，但逗號保留的方式來進行忽略元素。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">let numArray = [2, 4, 8, 10]</span><br><span class="line"></span><br><span class="line">let [, , , item] = numArray</span><br><span class="line"></span><br><span class="line">console.log(item)</span><br></pre></td></tr></table></figure></p>
+<h2 id="變數交換"><a href="#變數交換" class="headerlink" title="變數交換"></a>變數交換</h2><p>透過陣列的形式，進行陣列解構的變數交換<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">let a = 2;</span><br><span class="line">let b = 4;</span><br><span class="line"></span><br><span class="line">[a, b] = [b, a]</span><br><span class="line">console.log(a) // 印出 4</span><br><span class="line">console.log(b) // 印出 2</span><br></pre></td></tr></table></figure></p>
+<h2 id="剩餘部分重組"><a href="#剩餘部分重組" class="headerlink" title="剩餘部分重組"></a>剩餘部分重組</h2><p>去除原始陣列中部分元素，透過 <code>...</code> 的方式，將剩餘的元素重組成新陣列。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">let numArray = [1, 3, 5, 7, 9]</span><br><span class="line"></span><br><span class="line">let [first, ...node] = numArray</span><br><span class="line"></span><br><span class="line">console.log(node) // 印出 [3, 5, 7, 9]</span><br></pre></td></tr></table></figure></p>
+<h2 id="物件解構"><a href="#物件解構" class="headerlink" title="物件解構"></a>物件解構</h2><p>類似陣列解構，將變數快速賦值。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">let itemObj = &#123;</span><br><span class="line">  a: 10,</span><br><span class="line">  b: 20</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">let &#123;a, b&#125; = itemObj</span><br><span class="line">console.log(a) // 印出 10</span><br><span class="line">console.log(b) // 印出 20</span><br></pre></td></tr></table></figure></p>
+<p>物件解構，同樣可以給予預設值。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let &#123;a, b, c = 0&#125; = itemObj</span><br></pre></td></tr></table></figure></p>
+<p>改變變數名稱，解構時，冒號左側的 <code>key</code> 值必須維持和物件中相同，但右側可以命名新的變數。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">let itemObj = &#123;</span><br><span class="line">  a: 10,</span><br><span class="line">  b: 35</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">let &#123;a:x, b:y&#125; = itemObj</span><br><span class="line">console.log(y) // 印出 35</span><br></pre></td></tr></table></figure></p>
+<h2 id="解構函式"><a href="#解構函式" class="headerlink" title="解構函式"></a>解構函式</h2><p>透過解構傳進來的參數，精簡程式碼<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function distance(point) &#123;</span><br><span class="line">  let &#123;x, y&#125; = point</span><br><span class="line">  return Math.sqrt(x*x + y*y)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>但是解構函式，更進階的用法是，在參數內直接解構<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function distance(&#123;x, y&#125;) &#123;</span><br><span class="line">  return Math.sqrt(x*x + y*y)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>因此既能給予預設值<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function distance(&#123;x = 0, y&#125;) &#123;</span><br><span class="line">  return Math.sqrt(x*x + y*y)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>也能重新命名<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function distance(&#123;x:a, y&#125;) &#123;</span><br><span class="line">  return Math.sqrt(a*a + y*y)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
       
     </div>
 
@@ -498,7 +512,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+            <a href="/tags/ES6/" rel="tag"># ES6</a>
           
         </div>
       
@@ -511,8 +525,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/01/02/hexo-install-note/" rel="next" title="Hexo 安裝筆記">
-                <i class="fa fa-chevron-left"></i> Hexo 安裝筆記
+              <a href="/2019/06/23/javascript-hoisting/" rel="next" title="JavaScript：Hoisting (宣告提升)">
+                <i class="fa fa-chevron-left"></i> JavaScript：Hoisting (宣告提升)
               </a>
             
           </div>
@@ -520,10 +534,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/01/03/node-version-fixed/" rel="prev" title="Node 版本路徑修復">
-                Node 版本路徑修復 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -702,7 +712,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo-g-生成路徑錯誤導致樣式跑版"><span class="nav-number">1.</span> <span class="nav-text">hexo g 生成路徑錯誤導致樣式跑版</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Next-主題背景動畫配置無效果"><span class="nav-number">2.</span> <span class="nav-text">Next 主題背景動畫配置無效果</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#陣列解構"><span class="nav-number">1.</span> <span class="nav-text">陣列解構</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#預設值"><span class="nav-number">2.</span> <span class="nav-text">預設值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#忽略元素"><span class="nav-number">3.</span> <span class="nav-text">忽略元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#變數交換"><span class="nav-number">4.</span> <span class="nav-text">變數交換</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#剩餘部分重組"><span class="nav-number">5.</span> <span class="nav-text">剩餘部分重組</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#物件解構"><span class="nav-number">6.</span> <span class="nav-text">物件解構</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解構函式"><span class="nav-number">7.</span> <span class="nav-text">解構函式</span></a></li></ol></div>
             
 
           </div>
