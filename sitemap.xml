@@ -2,16 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://pittwu-hexo-blog.netlify.com/2019/06/22/question-javascript/</loc>
+    <loc>https://pittwu-hexo-blog.netlify.com/collection/index.html</loc>
     
-    <lastmod>2019-06-22T09:57:34.074Z</lastmod>
+    <lastmod>2019-06-23T09:35:37.282Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://pittwu-hexo-blog.netlify.com/2019/06/22/interview-collection/</loc>
+    <loc>https://pittwu-hexo-blog.netlify.com/about/index.html</loc>
     
-    <lastmod>2019-06-21T16:46:50.324Z</lastmod>
+    <lastmod>2019-06-23T08:21:23.977Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://pittwu-hexo-blog.netlify.com/2019/06/22/question-javascript/</loc>
+    
+    <lastmod>2019-06-23T08:00:12.224Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://pittwu-hexo-blog.netlify.com/2019/06/23/javascript-hoisting/</loc>
+    
+    <lastmod>2019-06-23T06:46:16.544Z</lastmod>
     
   </url>
   
@@ -75,13 +89,6 @@
     <loc>https://pittwu-hexo-blog.netlify.com/2019/01/02/hexo-install-note/</loc>
     
     <lastmod>2019-06-16T08:51:16.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://pittwu-hexo-blog.netlify.com/about/index.html</loc>
-    
-    <lastmod>2019-06-16T00:09:10.000Z</lastmod>
     
   </url>
   

@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[面試問題：JavaScript]]></title>
-    <url>%2F2019%2F06%2F22%2Fquestion-javascript%2F</url>
-    <content type="text"><![CDATA[JavaScript 基礎知識問題整理。 Q1：console.log(a) 會印出什麼？1Uncaught ReferenceError: a is not defined JavaScript 是一種弱型別語言，宣告變數時，不需要先聲明類型。但如果沒有先建立變數的情況下，自然也會出現 ReferenceError。 Q2：JavaScript 目前有幾種型別？12345678910javascript 目前定義了七種型別，包含如下：1. number - 數字，譬如 1232. string - 字符串，譬如：&apos;Hello&apos;3. boolean - 布林，true、false4. null5. undefined6. object - 物件，&#123;name: pitt&#125;、[12, 34, 56]、function7. symbol(ES6 新增的型別)這七種型別可以區分為兩大類，分別是基本型別和物件型別，除了 object 外，其他都是基本型別。]]></content>
+    <title><![CDATA[JavaScript：Hoisting (宣告提升)]]></title>
+    <url>%2F2019%2F06%2F23%2Fjavascript-hoisting%2F</url>
+    <content type="text"><![CDATA[記錄關於 Hoisting (宣告提升) 的知識點。 JavaScript 流程在一般的理解中，JavaScript 的語法運行流程，應該是先宣告變數，並進行賦值，最後印出變數的值。12var a = 5console.log(a) // 印出 5 特性因為 JavaScript 本身具有 Hoisting (宣告提升) 的特性，即使程式碼順序不正確。JavaScript 在檢視的過程中，會自動將宣告的變數提升至前面，促使程式可以正常執行。123item = 10console.log(item) // 印出10var item 但是 Hoisting 的特性在於宣告提升，而不影響賦值，所以如果把賦值放到後面，則會拿到 undefined。12console.log(item)var item = 10 JavaScript 實際運行時，會拿到下面的結果，自然也就印出 undefined。123var itemconsole.log(item) // 印出 undefineditem = 10 函式JavaScript 在函式，依然具有 Hoisting(宣告提升)的特性，所以下述的程式碼依然能夠執行。1234test()function test () &#123; console.log(&apos;Hello!&apos;)&#125; 但是，如果將函式賦值給變數，同樣會因為只有變數被提升，導致後面函式出現 is not defined1234test()var a = function test () &#123; console.log(&apos;Hello!&apos;)&#125;]]></content>
       <tags>
-        <tag>面試</tag>
         <tag>JavaScript</tag>
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[前端面試問題整理]]></title>
-    <url>%2F2019%2F06%2F22%2Finterview-collection%2F</url>
-    <content type="text"><![CDATA[隨著工作越深入，很多時候會發現，自己有些基礎知識不夠扎實。為了補強這一部分，藉著整理面試問題，順便替自己複習基礎知識。 HTMLCSSJavaScriptJavaScript 問題整理]]></content>
+    <title><![CDATA[面試問題：JavaScript]]></title>
+    <url>%2F2019%2F06%2F22%2Fquestion-javascript%2F</url>
+    <content type="text"><![CDATA[JavaScript 基礎知識問題整理。 Q1：直接輸入 console.log(a) 會印出什麼？1Uncaught ReferenceError: a is not defined JavaScript 是一種弱型別語言，宣告變數時，不需要先聲明類型。但如果沒有先建立變數的情況下，自然也會出現 ReferenceError。 Q2：JavaScript 目前有幾種型別？javascript 目前定義了七種型別，包含如下：1234567number - 數字，譬如 123string - 字符串，譬如：&apos;Hello&apos;boolean - 布林，true、falsenullundefinedobject - 物件，&#123;name: pitt&#125;、[12, 34, 56]、functionsymbol(ES6 新增的型別) 這七種型別可以區分為兩大類，分別是基本型別和物件型別，除了 object 外，其他都是基本型別。 Q3：let a = &quot;5&quot; * &quot;4&quot;，console.log(a) 會印出什麼？120 JavaScript 在 number 型別中，可以很好理解一般數學的四則運算，但是在 string 中，則會有些特別。string 相加時，會印出兩個字符串。12let a = &apos;2&apos; + &apos;2&apos;console.log(a) // 印出 &apos;22&apos; 但是 string 進行減法、乘法、除法時，則會進行一般數學計算。12let b = &apos;3&apos; * &apos;3&apos;console.log(b) // 印出 9 12let c = &apos;10&apos; - &apos;5&apos;console.log(c) // 印出 5 12let d = &apos;20&apos; / &apos;2&apos;console.log(d) // 印出 10 Q4：let item = &#39;1&#39; == &#39;10&#39; || &#39;2&#39; == &#39;2&#39;，console.log(item) 印出什麼？1true 其實這題沒什麼懸念，只是某次看到時，不知道大腦哪根神經接錯，竟然填 false，因此順手紀錄下來，避免下次再次犯錯。|| 即指滿足一邊條件即可，反之 &amp;&amp; 則須滿足所有條件。 因此，let item = &#39;1&#39; == &#39;10&#39; &amp;&amp; &#39;2&#39; == &#39;2&#39; 則印出 false。 Q5：第一行 function 是否能夠順利執行？1234numChange()function numChange() &#123; let num = 10&#125; 1基於 JavaScript 的 Hoisting(宣告提升) 特性，能夠執行。 JavaScript：Hoisting(宣告提升) Q6：下面 splice 方法會得出什麼結果？1234567var colorLength = [ &apos;yellow&apos;, &apos;blue&apos;, &apos;red&apos;]colorLength.splice(1, 1)console.log(colorLength) 12// 印出[&apos;yellow&apos;, &apos;red&apos;] 在 splice 方法中，第一個參數為起始位置，從哪一個位置開始刪除。第二個參數則為結束位置，如果不填，則從起始位置後面全部刪除。1234colorLength.splice(1)// 印出[&apos;yellow&apos;] 如果第二個參數填0，則不刪除任何值。1234colorLength.splice(1, 0)// 印出[&quot;yellow&quot;, &quot;blue&quot;, &quot;red&quot;] 第三個參數為可選，若有填值，則會加入原陣列中。1234colorLength.splice(2, 2, white)// 印出[&quot;yellow&quot;, &quot;blue&quot;, &quot;white&quot;] Q7：如何用 JavaScript 原生方法實作回上頁的功能？123可以調用兩種方法：1. window.history.back // 回到上一頁2. window.history.go(-1) // 指定回到上一頁，若傳入參數為 -2，則指定回到上二頁]]></content>
       <tags>
+        <tag>JavaScript</tag>
         <tag>面試</tag>
       </tags>
   </entry>
