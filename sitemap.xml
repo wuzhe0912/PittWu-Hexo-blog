@@ -2,23 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://pittwu-hexo-blog.netlify.com/2019/06/23/es6-destructuring/</loc>
-    
-    <lastmod>2019-06-23T16:08:54.913Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://pittwu-hexo-blog.netlify.com/demo/index.html</loc>
     
-    <lastmod>2019-06-23T09:52:20.407Z</lastmod>
+    <lastmod>2019-06-25T00:38:51.578Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://pittwu-hexo-blog.netlify.com/collection/index.html</loc>
     
-    <lastmod>2019-06-23T09:47:54.971Z</lastmod>
+    <lastmod>2019-06-25T00:36:07.074Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://pittwu-hexo-blog.netlify.com/2019/06/16/react-textcontent-demo/</loc>
+    
+    <lastmod>2019-06-24T17:22:11.724Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://pittwu-hexo-blog.netlify.com/2019/06/23/es6-destructuring/</loc>
+    
+    <lastmod>2019-06-23T16:08:54.913Z</lastmod>
     
   </url>
   
@@ -54,13 +61,6 @@
     <loc>https://pittwu-hexo-blog.netlify.com/2019/06/16/tab-change-up/</loc>
     
     <lastmod>2019-06-17T03:30:14.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://pittwu-hexo-blog.netlify.com/2019/06/16/react-textcontent-demo/</loc>
-    
-    <lastmod>2019-06-17T01:42:00.000Z</lastmod>
     
   </url>
   
