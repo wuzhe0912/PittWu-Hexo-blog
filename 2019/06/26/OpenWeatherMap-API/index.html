@@ -98,25 +98,25 @@
 
 
 
-  <meta name="description" content="記錄關於 Hoisting (宣告提升) 的知識點。">
-<meta name="keywords" content="JavaScript">
+  <meta name="description" content="實作串接 OpenWeather API。">
+<meta name="keywords" content="JavaScript,API">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaScript：Hoisting (宣告提升)">
-<meta property="og:url" content="https://pittwu-hexo-blog.netlify.com/2019/06/23/javascript-hoisting/index.html">
+<meta property="og:title" content="實作：串接 OpenWeather API">
+<meta property="og:url" content="https://pittwu-hexo-blog.netlify.com/2019/06/26/OpenWeatherMap-API/index.html">
 <meta property="og:site_name" content="Pitt Wu&#39;s Blog">
-<meta property="og:description" content="記錄關於 Hoisting (宣告提升) 的知識點。">
+<meta property="og:description" content="實作串接 OpenWeather API。">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:updated_time" content="2019-06-23T06:46:16.544Z">
+<meta property="og:updated_time" content="2019-06-26T15:27:00.403Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaScript：Hoisting (宣告提升)">
-<meta name="twitter:description" content="記錄關於 Hoisting (宣告提升) 的知識點。">
+<meta name="twitter:title" content="實作：串接 OpenWeather API">
+<meta name="twitter:description" content="實作串接 OpenWeather API。">
 
 
 
 
 
 
-  <link rel="canonical" href="https://pittwu-hexo-blog.netlify.com/2019/06/23/javascript-hoisting/">
+  <link rel="canonical" href="https://pittwu-hexo-blog.netlify.com/2019/06/26/OpenWeatherMap-API/">
 
 
 
@@ -126,7 +126,7 @@
   };
 </script>
 
-  <title>JavaScript：Hoisting (宣告提升) | Pitt Wu's Blog</title>
+  <title>實作：串接 OpenWeather API | Pitt Wu's Blog</title>
   
 
 
@@ -369,7 +369,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://pittwu-hexo-blog.netlify.com/2019/06/23/javascript-hoisting/">
+    <link itemprop="mainEntityOfPage" href="https://pittwu-hexo-blog.netlify.com/2019/06/26/OpenWeatherMap-API/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Pitt Wu">
@@ -386,7 +386,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">JavaScript：Hoisting (宣告提升)
+          <h1 class="post-title" itemprop="name headline">實作：串接 OpenWeather API
 
               
             
@@ -412,7 +412,7 @@
                 
               
 
-              <time title="Created: 2019-06-23 13:35:33 / Modified: 14:46:16" itemprop="dateCreated datePublished" datetime="2019-06-23T13:35:33+08:00">2019-06-23</time>
+              <time title="Created: 2019-06-26 23:00:17 / Modified: 23:27:00" itemprop="dateCreated datePublished" datetime="2019-06-26T23:00:17+08:00">2019-06-26</time>
             
 
             
@@ -430,7 +430,7 @@
 
           
           
-             <span id="/2019/06/23/javascript-hoisting/" class="leancloud_visitors" data-flag-title="JavaScript：Hoisting (宣告提升)">
+             <span id="/2019/06/26/OpenWeatherMap-API/" class="leancloud_visitors" data-flag-title="實作：串接 OpenWeather API">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -461,14 +461,11 @@
       
 
       
-        <p>記錄關於 <code>Hoisting (宣告提升)</code> 的知識點。<br><a id="more"></a></p>
-<h2 id="JavaScript-流程"><a href="#JavaScript-流程" class="headerlink" title="JavaScript 流程"></a>JavaScript 流程</h2><p>在一般的理解中，<code>JavaScript</code> 的語法運行流程，應該是先宣告變數，並進行賦值，最後印出變數的值。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var a = 5</span><br><span class="line">console.log(a)  // 印出 5</span><br></pre></td></tr></table></figure></p>
-<h2 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h2><p>因為 <code>JavaScript</code> 本身具有 <code>Hoisting (宣告提升)</code> 的特性，即使程式碼順序不正確。<br><code>JavaScript</code> 在檢視的過程中，會自動將宣告的變數提升至前面，促使程式可以正常執行。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">item = 10</span><br><span class="line">console.log(item)  // 印出10</span><br><span class="line">var item</span><br></pre></td></tr></table></figure></p>
-<p>但是 <code>Hoisting</code> 的特性在於宣告提升，而不影響賦值，所以如果把賦值放到後面，則會拿到 <code>undefined</code>。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">console.log(item)</span><br><span class="line">var item = 10</span><br></pre></td></tr></table></figure></p>
-<p><code>JavaScript</code> 實際運行時，會拿到下面的結果，自然也就印出 <code>undefined</code>。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var item</span><br><span class="line">console.log(item)  // 印出 undefined</span><br><span class="line">item = 10</span><br></pre></td></tr></table></figure></p>
-<h2 id="函式"><a href="#函式" class="headerlink" title="函式"></a>函式</h2><p><code>JavaScript</code> 在函式，依然具有 Hoisting(宣告提升)的特性，所以下述的程式碼依然能夠執行。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">test()</span><br><span class="line">function test () &#123;</span><br><span class="line">  console.log(&apos;Hello!&apos;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>但是，如果將函式賦值給變數，同樣會因為只有變數被提升，導致後面函式出現 <code>is not defined</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">test()</span><br><span class="line">var a = function test () &#123;</span><br><span class="line">  console.log(&apos;Hello!&apos;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-
+        <p>實作串接 <code>OpenWeather API</code>。<br><a id="more"></a></p>
+<h2 id="申請帳號"><a href="#申請帳號" class="headerlink" title="申請帳號"></a>申請帳號</h2><p><a href="https://openweathermap.org/" target="_blank" rel="noopener">OpenWeatherMap 官網</a></p>
+<h2 id="準備-icon"><a href="#準備-icon" class="headerlink" title="準備 icon"></a>準備 <code>icon</code></h2><h3 id="font-awesome-icon-4-7-cdn"><a href="#font-awesome-icon-4-7-cdn" class="headerlink" title="font awesome icon 4.7 cdn"></a><code>font awesome icon 4.7 cdn</code></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css</span><br></pre></td></tr></table></figure>
+<h3 id="search-icon"><a href="#search-icon" class="headerlink" title="search icon"></a><code>search icon</code></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;i class=&quot;fa fa-search&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="寫入-HTML"><a href="#寫入-HTML" class="headerlink" title="寫入 HTML"></a>寫入 <code>HTML</code></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;center&quot;&gt;</span><br><span class="line">  &lt;div class=&quot;container&quot;&gt;</span><br><span class="line">    &lt;header&gt;</span><br><span class="line">      &lt;div class=&quot;search&quot;&gt;</span><br><span class="line">        &lt;input type=&quot;text&quot; placeholder=&quot;Enter City Name&quot; id=&quot;search-txt&quot;&gt;</span><br><span class="line">        &lt;a href=&quot;#&quot; id=&quot;search-btn&quot;&gt;&lt;i class=&quot;fa fa-search&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/i&gt;&lt;/a&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    &lt;/header&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -493,6 +490,8 @@
           
             <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
           
+            <a href="/tags/API/" rel="tag"># API</a>
+          
         </div>
       
 
@@ -504,8 +503,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/06/22/question-javascript/" rel="next" title="面試問題：JavaScript">
-                <i class="fa fa-chevron-left"></i> 面試問題：JavaScript
+              <a href="/2019/06/23/es6-destructuring/" rel="next" title="ES6：解構賦值">
+                <i class="fa fa-chevron-left"></i> ES6：解構賦值
               </a>
             
           </div>
@@ -513,10 +512,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/06/23/es6-destructuring/" rel="prev" title="ES6：解構賦值">
-                ES6：解構賦值 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -697,7 +692,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript-流程"><span class="nav-number">1.</span> <span class="nav-text">JavaScript 流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#特性"><span class="nav-number">2.</span> <span class="nav-text">特性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函式"><span class="nav-number">3.</span> <span class="nav-text">函式</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#申請帳號"><span class="nav-number">1.</span> <span class="nav-text">申請帳號</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#準備-icon"><span class="nav-number">2.</span> <span class="nav-text">準備 icon</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#font-awesome-icon-4-7-cdn"><span class="nav-number">2.1.</span> <span class="nav-text">font awesome icon 4.7 cdn</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#search-icon"><span class="nav-number">2.2.</span> <span class="nav-text">search icon</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#寫入-HTML"><span class="nav-number">2.3.</span> <span class="nav-text">寫入 HTML</span></a></li></ol></li></ol></div>
             
 
           </div>
