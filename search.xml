@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[CSS 筆記整理]]></title>
+    <url>%2F2019%2F07%2F01%2Fcss%2F</url>
+    <content type="text"><![CDATA[整理記錄 CSS 相關的筆記連結。]]></content>
+      <tags>
+        <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[HTML 5 筆記整理]]></title>
+    <url>%2F2019%2F07%2F01%2Fhtml5%2F</url>
+    <content type="text"><![CDATA[整理記錄 HTML 5 相關的筆記連結。 基礎知識HTML 5：語意標籤]]></content>
+      <tags>
+        <tag>HTML 5</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[JavaScript 筆記整理]]></title>
     <url>%2F2019%2F06%2F30%2Fjavascript%2F</url>
     <content type="text"><![CDATA[整理記錄 JavaScript 相關的筆記連結。 基礎知識JavaScript：Hoisting (宣告提升)JavaScript：this (基礎)JavaScript：this (進階)ES6ES6：解構賦值]]></content>
@@ -19,7 +35,7 @@
   <entry>
     <title><![CDATA[JavaScript：this (進階)]]></title>
     <url>%2F2019%2F06%2F30%2Fjavascript-this-advanced%2F</url>
-    <content type="text"><![CDATA[JavaScript 中的函式綁定物件 this 進階知識。 使用 bind 重新綁定物件]]></content>
+    <content type="text"><![CDATA[JavaScript 中的函式綁定物件 this 進階知識。 使用 bind 重新綁定物件在預設的函式中，this 會指向 window 物件，但當預設函式使用 bind 時，會被重新綁定新物件 {a:2}。123456function demo () &#123; console.log(this)&#125;demo()let demo1 = demo.bind(&#123;a:2&#125;)demo1() 綁定物件進階用法使用 apply 綁定物件。1function.apply(綁定物件, [參數, ...]) 使用 call 綁定物件。1function.call(綁定物件, 參數)]]></content>
       <tags>
         <tag>JavaScript</tag>
       </tags>
@@ -45,8 +61,8 @@
     <url>%2F2019%2F06%2F29%2Finterview-css%2F</url>
     <content type="text"><![CDATA[CSS 基礎知識問題整理。 Q1：什麼是選擇器?CSS 選擇器常見分為四種，同時根據權重差異，決定彼此的優先級。 行內樣式(inline)，直接在 HTML 添加樣式，權重最重(1000) 1&lt;p style=&quot;color:red&quot;&gt;Hello&lt;/p&gt; ID 選擇器，權重次之(100) 1#header 最常用的 class，包含偽類、屬性，權重(10) 1.wrap、:hover、[attribute] 元素選擇器(即 HTML 元素本身)、偽元素，權重(1) 1p、h1、em、::after Q2：盒模型剛開始學寫 CSS 時，會面臨一個問題，當元素加入 padding、margin、border 時，邊距會導致 px 的數值差異，初期為了解決這個問題，常需要特別去加加減減數字，這樣對開發實在不友善。 為了改善這個問題，引入 box-sizing: border-box。讓寬度只計算內容本身 + padding + border。因此我們通常建議在初始化樣式時，加入到 *。123* &#123; box-sizing: border-box;&#125; Q3：margin 垂直覆蓋屬性margin 的特性中，當兩個元素為垂直時，會產生覆蓋重疊的問題。例如兩個 p 標籤，設定 margin 為 5px，理論上應該是 5px + 5px = 10px，但因為重疊的關係，實際上只有 5px，另外，如果兩個 tag 大小不一的話，大的一方會蓋掉小的一方。]]></content>
       <tags>
-        <tag>面試</tag>
         <tag>CSS</tag>
+        <tag>面試</tag>
       </tags>
   </entry>
   <entry>
