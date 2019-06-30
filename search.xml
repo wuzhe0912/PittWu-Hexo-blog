@@ -1,9 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[JavaScript 筆記整理]]></title>
+    <url>%2F2019%2F06%2F30%2Fjavascript%2F</url>
+    <content type="text"><![CDATA[整理記錄 JavaScript 相關的筆記連結。 基礎知識JavaScript：Hoisting (宣告提升)JavaScript：this (基礎)JavaScript：this (進階)ES6ES6：解構賦值]]></content>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[HTML 5：語意標籤]]></title>
+    <url>%2F2019%2F06%2F30%2Fhtml5-tag%2F</url>
+    <content type="text"><![CDATA[HTML 5 的語意標籤概念。 語意與非語意標籤常見的 div 就是典型的非語意標籤， 過往在 Layout 排版時，會透過設定常見的 class 名稱，來區分板塊上的位置。12&lt;div class=&quot;header&quot;&gt;&lt;/div&gt;&lt;div class=&quot;footer&quot;&gt;&lt;/div&gt; 到了 HTML 5 的版本後，原先通用常見的 class 命名，被加入到標籤，而這些新增的標籤，透過英文可以直接了解到其對應的區塊，因此也被稱為語意標籤。12&lt;header&gt;&lt;/header&gt;&lt;footer&gt;&lt;/footer&gt; 優點透過語意標籤，可以精簡化程式碼，不需要特別使用 div + class，此外對搜尋引擎優化(SEO)有更好的輔助效果，結構如下。1234567&lt;header&gt;標題&lt;/header&gt;&lt;nav&gt;Nav選單&lt;/nav&gt;&lt;main&gt; &lt;article&gt;文章內容&lt;/article&gt; &lt;aside&gt;側邊欄&lt;/aside&gt;&lt;/main&gt;&lt;footer&gt;底部&lt;/footer&gt; 若需要針對語意標籤處理樣式時，可以在 CSS 中使用標籤選擇器。123header &#123; color: blue;&#125;]]></content>
+      <tags>
+        <tag>HTML 5</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[JavaScript：this (進階)]]></title>
+    <url>%2F2019%2F06%2F30%2Fjavascript-this-advanced%2F</url>
+    <content type="text"><![CDATA[JavaScript 中的函式綁定物件 this 進階知識。]]></content>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[JavaScript：this (基礎)]]></title>
+    <url>%2F2019%2F06%2F30%2Fjavascript-this-basic%2F</url>
+    <content type="text"><![CDATA[JavaScript 中的函式綁定物件 this 基礎知識。 基本觀念this 代表函式的綁定物件，通常在函式中使用。但在不同程式碼狀況下，綁定物件會代表不同東西。 情境一：獨立的函式當 this 使用在函式時，會指向 HTML DOM 中最上層的 window 物件。也就因此能指向 window 底下的對象，譬如視窗的寬 innerWidth。12345function demo () &#123; console.log(this) console.log(innerWidth)&#125;demo() 情境二：物件在物件中，this 會被指向物件本身，因此物件中有的屬性或值，都可以被 this 指向，並且進行操作，例如使用 console 印出來。12345678let obj = &#123; a: 2, demo: function () &#123; console.log(this) console.log(this.a) // 印出 2 &#125;&#125;obj.demo() 情境三：事件處理函式在事件中使用 this，其本身就是觸發事件的對象，譬如綁定在 button 上，就會觸發 button。而當現在未綁定時，就會指向 document。1234document.addEventListener(&apos;click&apos;, function () &#123; console.log(this) this.body.innerHTML = &apos;Clicked&apos;&#125;) 情境四：建構函式在建構式當中，this 會是瀏覽器自動幫我們新建立好的空白物件。因此當我們在其中進行賦值時，相對也就會塞進物件中。1234567function Point () &#123; console.log(this) this.a = 5 this.b = 10&#125;let test = new Point()console.log(test)]]></content>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Golang 入門]]></title>
+    <url>%2F2019%2F06%2F30%2Fgolang-started%2F</url>
+    <content type="text"><![CDATA[記錄 Golang 的基礎知識、環境安裝和快速開始。 基本特性泛用性程式語言，可用於開發各種應用，側重強調效能，有更強的乘載能力。同時相對於傳統的 C、C++，學習成本更低。]]></content>
+      <tags>
+        <tag>Golang</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[面試問題整理：CSS]]></title>
     <url>%2F2019%2F06%2F29%2Finterview-css%2F</url>
-    <content type="text"><![CDATA[CSS 基礎知識問題整理。]]></content>
+    <content type="text"><![CDATA[CSS 基礎知識問題整理。 Q1：什麼是選擇器?CSS 選擇器常見分為四種，同時根據權重差異，決定彼此的優先級。 行內樣式(inline)，直接在 HTML 添加樣式，權重最重(1000) 1&lt;p style=&quot;color:red&quot;&gt;Hello&lt;/p&gt; ID 選擇器，權重次之(100) 1#header 最常用的 class，包含偽類、屬性，權重(10) 1.wrap、:hover、[attribute] 元素選擇器(即 HTML 元素本身)、偽元素，權重(1) 1p、h1、em、::after Q2：盒模型剛開始學寫 CSS 時，會面臨一個問題，當元素加入 padding、margin、border 時，邊距會導致 px 的數值差異，初期為了解決這個問題，常需要特別去加加減減數字，這樣對開發實在不友善。 為了改善這個問題，引入 box-sizing: border-box。讓寬度只計算內容本身 + padding + border。因此我們通常建議在初始化樣式時，加入到 *。123* &#123; box-sizing: border-box;&#125; Q3：margin 垂直覆蓋屬性margin 的特性中，當兩個元素為垂直時，會產生覆蓋重疊的問題。例如兩個 p 標籤，設定 margin 為 5px，理論上應該是 5px + 5px = 10px，但因為重疊的關係，實際上只有 5px，另外，如果兩個 tag 大小不一的話，大的一方會蓋掉小的一方。]]></content>
       <tags>
         <tag>面試</tag>
         <tag>CSS</tag>
@@ -11,7 +51,7 @@
   </entry>
   <entry>
     <title><![CDATA[實作：串接 OpenWeather API]]></title>
-    <url>%2F2019%2F06%2F26%2FOpenWeatherMap-API%2F</url>
+    <url>%2F2019%2F06%2F26%2Fopenweathermap-api%2F</url>
     <content type="text"><![CDATA[實作串接 OpenWeather API。 申請帳號OpenWeatherMap 官網 準備 iconfont awesome icon 4.7 cdn1https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css search icon1&lt;i class=&quot;fa fa-search&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; 寫入 HTML12345678910&lt;div class=&quot;center&quot;&gt; &lt;div class=&quot;container&quot;&gt; &lt;header&gt; &lt;div class=&quot;search&quot;&gt; &lt;input type=&quot;text&quot; placeholder=&quot;Enter City Name&quot; id=&quot;search-txt&quot;&gt; &lt;a href=&quot;#&quot; id=&quot;search-btn&quot;&gt;&lt;i class=&quot;fa fa-search&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/i&gt;&lt;/a&gt; &lt;/div&gt; &lt;/header&gt; &lt;/div&gt;&lt;/div&gt;]]></content>
       <tags>
         <tag>JavaScript</tag>
@@ -39,8 +79,8 @@
     <url>%2F2019%2F06%2F22%2Finterview-javascript%2F</url>
     <content type="text"><![CDATA[JavaScript 基礎知識問題整理。 Q1：直接輸入 console.log(a) 會印出什麼？1Uncaught ReferenceError: a is not defined JavaScript 是一種弱型別語言，宣告變數時，不需要先聲明類型。但如果沒有先建立變數的情況下，自然也會出現 ReferenceError。 Q2：JavaScript 目前有幾種型別？javascript 目前定義了七種型別，包含如下：1234567number - 數字，譬如 123string - 字符串，譬如：&apos;Hello&apos;boolean - 布林，true、falsenullundefinedobject - 物件，&#123;name: pitt&#125;、[12, 34, 56]、functionsymbol(ES6 新增的型別) 這七種型別可以區分為兩大類，分別是基本型別和物件型別，除了 object 外，其他都是基本型別。 Q3：let a = &quot;5&quot; * &quot;4&quot;，console.log(a) 會印出什麼？120 JavaScript 在 number 型別中，可以很好理解一般數學的四則運算，但是在 string 中，則會有些特別。string 相加時，會印出兩個字符串。12let a = &apos;2&apos; + &apos;2&apos;console.log(a) // 印出 &apos;22&apos; 但是 string 進行減法、乘法、除法時，則會進行一般數學計算。12let b = &apos;3&apos; * &apos;3&apos;console.log(b) // 印出 9 12let c = &apos;10&apos; - &apos;5&apos;console.log(c) // 印出 5 12let d = &apos;20&apos; / &apos;2&apos;console.log(d) // 印出 10 Q4：let item = &#39;1&#39; == &#39;10&#39; || &#39;2&#39; == &#39;2&#39;，console.log(item) 印出什麼？1true 其實這題沒什麼懸念，只是某次看到時，不知道大腦哪根神經接錯，竟然填 false，因此順手紀錄下來，避免下次再次犯錯。|| 即指滿足一邊條件即可，反之 &amp;&amp; 則須滿足所有條件。 因此，let item = &#39;1&#39; == &#39;10&#39; &amp;&amp; &#39;2&#39; == &#39;2&#39; 則印出 false。 Q5：第一行 function 是否能夠順利執行？1234numChange()function numChange() &#123; let num = 10&#125; 1基於 JavaScript 的 Hoisting(宣告提升) 特性，能夠執行。 JavaScript：Hoisting(宣告提升) Q6：下面 splice 方法會得出什麼結果？1234567var colorLength = [ &apos;yellow&apos;, &apos;blue&apos;, &apos;red&apos;]colorLength.splice(1, 1)console.log(colorLength) 12// 印出[&apos;yellow&apos;, &apos;red&apos;] 在 splice 方法中，第一個參數為起始位置，從哪一個位置開始刪除。第二個參數則為結束位置，如果不填，則從起始位置後面全部刪除。1234colorLength.splice(1)// 印出[&apos;yellow&apos;] 如果第二個參數填0，則不刪除任何值。1234colorLength.splice(1, 0)// 印出[&quot;yellow&quot;, &quot;blue&quot;, &quot;red&quot;] 第三個參數為可選，若有填值，則會加入原陣列中。1234colorLength.splice(2, 2, white)// 印出[&quot;yellow&quot;, &quot;blue&quot;, &quot;white&quot;] Q7：如何用 JavaScript 原生方法實作回上頁的功能？123可以調用兩種方法：1. window.history.back // 回到上一頁2. window.history.go(-1) // 指定回到上一頁，若傳入參數為 -2，則指定回到上二頁]]></content>
       <tags>
-        <tag>JavaScript</tag>
         <tag>面試</tag>
+        <tag>JavaScript</tag>
       </tags>
   </entry>
   <entry>

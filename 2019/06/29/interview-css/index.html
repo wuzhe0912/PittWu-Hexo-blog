@@ -106,7 +106,7 @@
 <meta property="og:site_name" content="Pitt Wu&#39;s Blog">
 <meta property="og:description" content="CSS 基礎知識問題整理。">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:updated_time" content="2019-06-29T15:52:11.174Z">
+<meta property="og:updated_time" content="2019-06-29T17:10:27.174Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面試問題整理：CSS">
 <meta name="twitter:description" content="CSS 基礎知識問題整理。">
@@ -412,12 +412,24 @@
                 
               
 
-              <time title="Created: 2019-06-29 23:51:10 / Modified: 23:52:11" itemprop="dateCreated datePublished" datetime="2019-06-29T23:51:10+08:00">2019-06-29</time>
+              <time title="Created: 2019-06-29 23:51:10" itemprop="dateCreated datePublished" datetime="2019-06-29T23:51:10+08:00">2019-06-29</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-06-30 01:10:27" itemprop="dateModified" datetime="2019-06-30T01:10:27+08:00">2019-06-30</time>
               
             
           </span>
@@ -462,6 +474,24 @@
 
       
         <p><code>CSS</code> 基礎知識問題整理。<br><a id="more"></a></p>
+<h2 id="Q1：什麼是選擇器"><a href="#Q1：什麼是選擇器" class="headerlink" title="Q1：什麼是選擇器?"></a>Q1：什麼是選擇器?</h2><p><code>CSS</code> 選擇器常見分為四種，同時根據權重差異，決定彼此的優先級。</p>
+<ol>
+<li><p>行內樣式(inline)，直接在 <code>HTML</code> 添加樣式，權重最重(1000)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;p style=&quot;color:red&quot;&gt;Hello&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>ID 選擇器，權重次之(100)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#header</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>最常用的 <code>class</code>，包含偽類、屬性，權重(10)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.wrap、:hover、[attribute]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>元素選擇器(即 <code>HTML</code> 元素本身)、偽元素，權重(1)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p、h1、em、::after</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="Q2：盒模型"><a href="#Q2：盒模型" class="headerlink" title="Q2：盒模型"></a>Q2：盒模型</h2><p>剛開始學寫 <code>CSS</code> 時，會面臨一個問題，當元素加入 <code>padding</code>、<code>margin</code>、<code>border</code> 時，邊距會導致 <code>px</code> 的數值差異，初期為了解決這個問題，常需要特別去加加減減數字，這樣對開發實在不友善。</p>
+<p>為了改善這個問題，引入 <code>box-sizing: border-box</code>。讓寬度只計算內容本身 + padding + border。因此我們通常建議在初始化樣式時，加入到 <code>*</code>。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">* &#123;</span><br><span class="line">  box-sizing: border-box;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="Q3：margin-垂直覆蓋屬性"><a href="#Q3：margin-垂直覆蓋屬性" class="headerlink" title="Q3：margin 垂直覆蓋屬性"></a>Q3：<code>margin</code> 垂直覆蓋屬性</h2><p><code>margin</code> 的特性中，當兩個元素為垂直時，會產生覆蓋重疊的問題。例如兩個 <code>p</code> 標籤，設定 <code>margin</code> 為 <code>5px</code>，理論上應該是 <code>5px + 5px = 10px</code>，但因為重疊的關係，實際上只有 <code>5px</code>，另外，如果兩個 <code>tag</code> 大小不一的話，大的一方會蓋掉小的一方。</p>
 
       
     </div>
@@ -500,7 +530,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/06/26/OpenWeatherMap-API/" rel="next" title="實作：串接 OpenWeather API">
+              <a href="/2019/06/26/openweathermap-api/" rel="next" title="實作：串接 OpenWeather API">
                 <i class="fa fa-chevron-left"></i> 實作：串接 OpenWeather API
               </a>
             
@@ -509,6 +539,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/06/30/golang-started/" rel="prev" title="Golang 入門">
+                Golang 入門 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -553,8 +587,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -571,7 +614,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">16</span>
+                    <span class="site-state-item-count">21</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -620,7 +663,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">17</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">19</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -671,6 +718,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Q1：什麼是選擇器"><span class="nav-number">1.</span> <span class="nav-text">Q1：什麼是選擇器?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Q2：盒模型"><span class="nav-number">2.</span> <span class="nav-text">Q2：盒模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Q3：margin-垂直覆蓋屬性"><span class="nav-number">3.</span> <span class="nav-text">Q3：margin 垂直覆蓋屬性</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
