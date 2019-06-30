@@ -19,7 +19,7 @@
   <entry>
     <title><![CDATA[JavaScript：this (進階)]]></title>
     <url>%2F2019%2F06%2F30%2Fjavascript-this-advanced%2F</url>
-    <content type="text"><![CDATA[JavaScript 中的函式綁定物件 this 進階知識。]]></content>
+    <content type="text"><![CDATA[JavaScript 中的函式綁定物件 this 進階知識。 使用 bind 重新綁定物件]]></content>
       <tags>
         <tag>JavaScript</tag>
       </tags>
@@ -35,7 +35,7 @@
   <entry>
     <title><![CDATA[Golang 入門]]></title>
     <url>%2F2019%2F06%2F30%2Fgolang-started%2F</url>
-    <content type="text"><![CDATA[記錄 Golang 的基礎知識、環境安裝和快速開始。 基本特性泛用性程式語言，可用於開發各種應用，側重強調效能，有更強的乘載能力。同時相對於傳統的 C、C++，學習成本更低。]]></content>
+    <content type="text"><![CDATA[記錄 Golang 的基礎知識、環境安裝和快速開始。 基本特性泛用性程式語言，可用於開發各種應用，側重強調效能，有更強的乘載能力。同時相對於傳統的 C、C++，學習成本更低。 安裝Golang 官網點擊 Download Go，並下載對應的 OS 版本。 第一個 go建立一個 hello.go 的初始檔案，撰寫以下程式碼。12345package main // 封包import &quot;fmt&quot;func main () &#123; fmt.Println(&quot;Hello Golang&quot;)&#125; 建置 build1go build hello.go(專案名稱) 若 build 成功，則 iterm2 不會出現其他額外訊息，同時資料夾多出一個 hello 的終端機檔案。 把 hello 終端機檔案，丟入 zsh 的路徑，印出 Hello Golang，即代表成功。]]></content>
       <tags>
         <tag>Golang</tag>
       </tags>

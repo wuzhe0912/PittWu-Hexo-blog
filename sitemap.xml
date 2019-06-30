@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://pittwu-hexo-blog.netlify.com/2019/06/30/javascript-this-advanced/</loc>
+    
+    <lastmod>2019-06-30T15:52:57.005Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://pittwu-hexo-blog.netlify.com/2019/06/30/golang-started/</loc>
+    
+    <lastmod>2019-06-30T15:51:21.490Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://pittwu-hexo-blog.netlify.com/2019/06/30/html5-tag/</loc>
     
     <lastmod>2019-06-30T08:03:07.614Z</lastmod>
@@ -12,13 +26,6 @@
     <loc>https://pittwu-hexo-blog.netlify.com/2019/06/30/javascript-this-basic/</loc>
     
     <lastmod>2019-06-30T07:12:22.082Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://pittwu-hexo-blog.netlify.com/2019/06/30/javascript-this-advanced/</loc>
-    
-    <lastmod>2019-06-30T07:12:16.320Z</lastmod>
     
   </url>
   
@@ -47,13 +54,6 @@
     <loc>https://pittwu-hexo-blog.netlify.com/demo/index.html</loc>
     
     <lastmod>2019-06-30T03:59:04.042Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://pittwu-hexo-blog.netlify.com/2019/06/30/golang-started/</loc>
-    
-    <lastmod>2019-06-30T01:58:27.327Z</lastmod>
     
   </url>
   
