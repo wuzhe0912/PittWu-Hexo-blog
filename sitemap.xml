@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://pittwu-hexo-blog.netlify.com/2019/07/05/interview-html/</loc>
+    
+    <lastmod>2019-07-05T00:05:33.403Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://pittwu-hexo-blog.netlify.com/2019/06/29/interview-css/</loc>
+    
+    <lastmod>2019-07-05T00:02:51.117Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://pittwu-hexo-blog.netlify.com/collection/index.html</loc>
+    
+    <lastmod>2019-07-04T23:54:29.676Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://pittwu-hexo-blog.netlify.com/2019/07/05/interview-question/</loc>
+    
+    <lastmod>2019-07-04T23:53:47.722Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://pittwu-hexo-blog.netlify.com/demo/index.html</loc>
     
     <lastmod>2019-06-30T16:38:08.735Z</lastmod>
@@ -12,13 +40,6 @@
     <loc>https://pittwu-hexo-blog.netlify.com/2019/06/30/javascript-this-advanced/</loc>
     
     <lastmod>2019-06-30T16:14:32.289Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://pittwu-hexo-blog.netlify.com/collection/index.html</loc>
-    
-    <lastmod>2019-06-30T16:10:05.927Z</lastmod>
     
   </url>
   
@@ -68,13 +89,6 @@
     <loc>https://pittwu-hexo-blog.netlify.com/2019/06/26/openweathermap-api/</loc>
     
     <lastmod>2019-06-30T04:16:34.557Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://pittwu-hexo-blog.netlify.com/2019/06/29/interview-css/</loc>
-    
-    <lastmod>2019-06-29T17:10:27.174Z</lastmod>
     
   </url>
   
