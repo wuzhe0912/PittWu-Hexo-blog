@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://pittwu-hexo-blog.netlify.com/2019/06/16/node-environment/</loc>
+    
+    <lastmod>2019-07-07T15:38:47.904Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://pittwu-hexo-blog.netlify.com/2019/07/07/read-metabolism-diet/</loc>
+    
+    <lastmod>2019-07-07T15:34:35.284Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://pittwu-hexo-blog.netlify.com/2019/07/06/youtube-tutorials/</loc>
     
     <lastmod>2019-07-06T17:29:11.626Z</lastmod>
@@ -159,13 +173,6 @@
     <loc>https://pittwu-hexo-blog.netlify.com/2019/06/12/progressBar/</loc>
     
     <lastmod>2019-06-16T14:36:26.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://pittwu-hexo-blog.netlify.com/2019/06/16/node-environment/</loc>
-    
-    <lastmod>2019-06-16T09:53:24.000Z</lastmod>
     
   </url>
   

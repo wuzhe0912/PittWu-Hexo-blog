@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[閱讀心得：《越吃越瘦的新陳代謝飲食》]]></title>
+    <url>%2F2019%2F07%2F07%2Fread-metabolism-diet%2F</url>
+    <content type="text"><![CDATA[出社會後，體重計上的數字始終令我難堪，肥胖不僅傷了面子更傷了裡子，既然工程師的核心思想就是要解決問題，顯然過重已成了我人生中的一大問題，必然要動手解決它。 閱讀文件減肥的招式，隨手 google 都有成千上萬種結果，前陣子在博客來買一些心理學的書籍時，無意間發現這本《越吃越瘦的新陳代謝飲食》，雖然下方的閱讀心得與評價，普遍對這本書持正面態度，但畢竟自己尚未開始實作，自然得抱持懷疑的心態。]]></content>
+      <tags>
+        <tag>閱讀心得</tag>
+        <tag>減肥</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[學習資料整理]]></title>
     <url>%2F2019%2F07%2F06%2Fyoutube-tutorials%2F</url>
     <content type="text"><![CDATA[龐大的網路資源是學寫 Code 的優勢，但這些資源基本散落各方，有時是文章，有時則是 YouTube 的影片，為了方便自己查詢，索性整理成文章。 YouTube英文資源 freeCodeCamp Academind Online Tutorials Traversy Media DesignCourse Red Stapler Patiphan Phengpao Online web ustaad Daily Tuition Easy Tutorials 中文資源 彭彭的課程 老闆，來點寇汀吧。 六角學院 CSScoke Alex 宅幹嘛 小马技术 Big Boy Can Code]]></content>
@@ -158,7 +167,7 @@
       <tags>
         <tag>node</tag>
         <tag>nvm</tag>
-        <tag>環境</tag>
+        <tag>環境搭建</tag>
       </tags>
   </entry>
   <entry>
